@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaid Shaheed - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Zaid Shaheed</div>
+    </header>
+
+    <main class="main-container">
+        <section class="welcome-section">
+            <h1 class="welcome-title">Who's browsing today?</h1>
+            <p class="welcome-subtitle">
+                Choose your perspective to explore my portfolio tailored to your interests and needs.
+                Each account provides a curated view of my work and experience.
+            </p>
+        </section>
+
+        <section class="account-selection">
+            <div class="account-grid">
+                <div class="account-card" data-account="recruiter">
+                    <div class="account-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="account-name">Recruiter</h2>
+                    <p class="account-description">
+                        Professional experience, skills, achievements, and work samples tailored for employment opportunities.
+                    </p>
+                </div>
+
+                <div class="account-card" data-account="university">
+                    <div class="account-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="account-name">University</h2>
+                    <p class="account-description">
+                        Academic projects, coursework, research, and educational background for academic institutions.
+                    </p>
+                </div>
+
+                <div class="account-card" data-account="developer">
+                    <div class="account-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2 class="account-name">Fellow Developer</h2>
+                    <p class="account-description">
+                        Technical projects, code repositories, open source contributions, and development expertise.
+                    </p>
+                </div>
+
+                <div class="account-card" data-account="other">
+                    <div class="account-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2 class="account-name">Other</h2>
+                    <p class="account-description">
+                        A general overview of my work, interests, and capabilities for anyone curious about what I do.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Add click functionality to account cards
+        document.querySelectorAll('.account-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const accountType = this.getAttribute('data-account');
+                // For now, just log the selection - you can implement routing later
+                console.log('Selected account type:', accountType);
+                // Future: window.location.href = `/portfolio/${accountType}/`;
+            });
+        });
+    </script>
+</body>
+</html>
