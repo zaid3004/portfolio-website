@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaid Shaheed - University Portfolio</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="portfolio-page">
+    <header class="header">
+        <a href="{% url 'index' %}">
+        <div class="logo">Zaid Shaheed</div>
+        </a>
+    </header>
+
+    <main class="main-container">
+        <section class="welcome-section">
+            <h1 class="welcome-title">University Portfolio</h1>
+            <p class="welcome-subtitle">
+                Academic journey showcasing coursework, research projects, and educational achievements
+                tailored for university admissions and academic institutions.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <!-- Academic Projects Section -->
+            <div class="portfolio-section">
+                <h2 class="section-title">Personal Projects</h2>
+                <div class="movies-container">
+                    <button class="scroll-btn left">‹</button>
+                    <div class="movies-row">
+                        <div class="movie-card">
+                            <div class="movie-rating">Website</div>
+                            <h3 class="movie-title">OTT-Style Portfolio</h3>
+                            <p class="movie-description">OTT-style portfolio website built with Django, featuring responsive design, interactive elements, and dynamic content sections.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Web Application</div>
+                            <h3 class="movie-title">Finance Tracker App</h3>
+                            <p class="movie-description">A robust app that lets users manage income and expenses across multiple accounts, filter and sort transactions, view charts, import/export data, and use built-in currency conversion.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Voice Virtual Assistant</div>
+                            <h3 class="movie-title">Software Engineering Project</h3>
+                            <p class="movie-description">Team-based software development project following agile methodologies, version control, and comprehensive testing practices.</p>
+                        </div>
+                    </div>
+                    <button class="scroll-btn right">›</button>
+                </div>
+            </div>
+
+            <!-- Coursework Section -->
+            <div class="portfolio-section">
+                <h2 class="section-title">Coursework, Research & Publications</h2>
+                <div class="movies-container">
+                    <button class="scroll-btn left">‹</button>
+                    <div class="movies-row">
+                        <div class="movie-card">
+                            <div class="movie-rating">Core</div>
+                            <h3 class="movie-title">Computer Science Fundamentals</h3>
+                            <p class="movie-description">Object-oriented programming, data structures, algorithms, and computational theory with hands-on programming assignments.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Advanced</div>
+                            <h3 class="movie-title">Database Systems</h3>
+                            <p class="movie-description">Relational database design, SQL optimization, management, and distributed database systems concepts.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Core</div>
+                            <h3 class="movie-title">Harvard CS50W</h3>
+                            <p class="movie-description">Frontend and backend web development, API integrations, modern frameworks, and responsive web design principles.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Research</div>
+                            <h3 class="movie-title">VVA Research Paper</h3>
+                            <p class="movie-description">In our Aurora VVA research paper, my team and I explored building an AI-powered virtual voice assistant using speech recognition, natural language processing, and Python-based automation.</p>
+                        </div>
+                    </div>
+                    <button class="scroll-btn right">›</button>
+                </div>
+            </div>
+
+            <!-- Academic Achievements Section -->
+            <div class="portfolio-section">
+                <h2 class="section-title">Academic Achievements</h2>
+                <div class="movies-container">
+                    <button class="scroll-btn left">‹</button>
+                    <div class="movies-row">
+                        <div class="movie-card">
+                            <div class="movie-rating">Honor</div>
+                            <h3 class="movie-title">Dean's List Recognition</h3>
+                            <p class="movie-description">Consistent academic excellence with multiple semesters on Dean's List, maintaining high GPA while pursuing challenging coursework.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Award</div>
+                            <h3 class="movie-title">Academic Scholarship</h3>
+                            <p class="movie-description">Merit-based scholarship recipient recognizing outstanding academic performance and potential in computer science field.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Leadership</div>
+                            <h3 class="movie-title">Student Organization Leader</h3>
+                            <p class="movie-description">Active leadership role in computer science student organization, organizing events and mentoring fellow students.</p>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-rating">Service</div>
+                            <h3 class="movie-title">Peer Tutoring Program</h3>
+                            <p class="movie-description">Volunteer tutor helping students with programming fundamentals and mathematical concepts in computer science.</p>
+                        </div>
+                    </div>
+                    <button class="scroll-btn right">›</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Netflix-style scrolling functionality
+        document.querySelectorAll('.scroll-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const container = this.parentElement;
+                const moviesRow = container.querySelector('.movies-row');
+                const cardWidth = 295; // card width + gap (280px + 15px)
+                
+                if (this.classList.contains('left')) {
+                    moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
+                } else {
+                    moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+    <script src="{% static 'website/js/exploded-view.js' %}"></script>
+
+</body>
+</html>

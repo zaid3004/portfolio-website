@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaid Shaheed - Portfolio</title>
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
+        <a href="{% url 'index' %}">
         <div class="logo">Zaid Shaheed</div>
+        </a>
     </header>
 
     <main class="main-container">
@@ -31,7 +32,7 @@
                     </div>
                     <h2 class="account-name">Recruiter</h2>
                     <p class="account-description">
-                        Professional experience, skills, achievements, and work samples tailored for employment opportunities.
+                        Professional experience, skills, achievements, and projects tailored for employment opportunities.
                     </p>
                 </div>
 
@@ -41,7 +42,7 @@
                     </div>
                     <h2 class="account-name">University</h2>
                     <p class="account-description">
-                        Academic projects, coursework, research, and educational background for academic institutions.
+                        Academic projects, skills, involvements and educational background for academic institutions.
                     </p>
                 </div>
 
@@ -51,7 +52,7 @@
                     </div>
                     <h2 class="account-name">Fellow Developer</h2>
                     <p class="account-description">
-                        Technical projects, code repositories, open source contributions, and development expertise.
+                        Technical projects, code repositories, open source contributions, and development expertise for others like myself.
                     </p>
                 </div>
 
@@ -73,11 +74,29 @@
         document.querySelectorAll('.account-card').forEach(card => {
             card.addEventListener('click', function() {
                 const accountType = this.getAttribute('data-account');
-                // For now, just log the selection - you can implement routing later
                 console.log('Selected account type:', accountType);
-                // Future: window.location.href = `/portfolio/${accountType}/`;
+                
+                // Navigate based on account type
+                switch (accountType) {
+                    case 'recruiter':
+                        window.location.href = '{% url "recruiters" %}';
+                        break;
+                    case 'university':
+                        window.location.href = '{% url "university" %}';
+                        break;
+                    case 'developer':
+                        window.location.href = '{% url "developer" %}';
+                        break;
+                    case 'other':
+                        window.location.href = '{% url "other" %}';
+                        break;
+                    default:
+                        console.log('Unknown account type:', accountType);
+                }
             });
         });
     </script>
+    <script src="{% static 'website/js/exploded-view.js' %}"></script>
+
 </body>
 </html>
