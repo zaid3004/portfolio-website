@@ -34,18 +34,18 @@
                     <div class="movies-row">
                         <div class="movie-card">
                             <div class="movie-rating">Website</div>
-                            <h3 class="movie-title">OTT-Style Portfolio</h3>
+                            <h3 class="movie-title">Portfolio Website</h3>
                             <p class="movie-description">OTT-style portfolio website built with Django, featuring responsive design, interactive elements, and dynamic content sections.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Web Application</div>
-                            <h3 class="movie-title">Finance Tracker App</h3>
+                            <h3 class="movie-title">Finance Tracker</h3>
                             <p class="movie-description">A robust app that lets users manage income and expenses across multiple accounts, filter and sort transactions, view charts, import/export data, and use built-in currency conversion.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Voice Virtual Assistant</div>
-                            <h3 class="movie-title">Software Engineering Project</h3>
-                            <p class="movie-description">Team-based software development project following agile methodologies, version control, and comprehensive testing practices.</p>
+                            <h3 class="movie-title">Aurora VVA </h3>
+                            <p class="movie-description">Team-based AI and TTS project following agile methodologies, version control, and comprehensive testing practices.</p>
                         </div>
                     </div>
                     <button class="scroll-btn right">›</button>
@@ -65,13 +65,13 @@
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Advanced</div>
-                            <h3 class="movie-title">Database Systems</h3>
+                            <h3 class="movie-title">Database Management</h3>
                             <p class="movie-description">Relational database design, SQL optimization, management, and distributed database systems concepts.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Core</div>
                             <h3 class="movie-title">Harvard CS50W</h3>
-                            <p class="movie-description">Frontend and backend web development, API integrations, modern frameworks, and responsive web design principles.</p>
+                            <p class="movie-description">Completed Harvard’s CS50W course, building expertise in modern web development including backend, frontend, and database integration.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Research</div>
@@ -116,22 +116,6 @@
         </section>
     </main>
 
-    <script>
-        // Netflix-style scrolling functionality
-        document.querySelectorAll('.scroll-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const container = this.parentElement;
-                const moviesRow = container.querySelector('.movies-row');
-                const cardWidth = 295; // card width + gap (280px + 15px)
-                
-                if (this.classList.contains('left')) {
-                    moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
-                } else {
-                    moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
     <script src="{% static 'website/js/exploded-view.js' %}"></script>
 
 </body>

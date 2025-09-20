@@ -34,12 +34,12 @@
                     <div class="movies-row">
                         <div class="movie-card">
                             <div class="movie-rating">Featured</div>
-                            <h3 class="movie-title">OTT-Style Portfolio</h3>
+                            <h3 class="movie-title">Portfolio Website</h3>
                             <p class="movie-description">Django-powered portfolio with responsive CSS Grid, smooth scrolling, and interactive movie-card hover effects. Deployed on cloud infrastructure.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Full-Stack</div>
-                            <h3 class="movie-title">Real-Time VVA Application</h3>
+                            <h3 class="movie-title">Voice Virtual Assistant</h3>
                             <p class="movie-description">Python-based chat app using JavaScript, HTML, and CSS. Features user authentication, system information, and live notifications.</p>
                         </div>
                         <div class="movie-card">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Databases</div>
-                            <h3 class="movie-title">Database Technologies</h3>
+                            <h3 class="movie-title">Database Management</h3>
                             <p class="movie-description">PostgreSQL, MongoDB, SQLite, database optimization, indexing strategies, CSV/Excel integration for efficient data storage, management and retrieval.</p>
                         </div>
                         <div class="movie-card">
@@ -136,6 +136,11 @@
                     <button class="scroll-btn left">‹</button>
                     <div class="movies-row">
                         <div class="movie-card">
+                            <div class="movie-rating">Learning</div>
+                            <h3 class="movie-title">Continuous Learning</h3>
+                            <p class="movie-description">Currently exploring React, ML, and advanced system design patterns. Always experimenting with emerging technologies and frameworks.</p>
+                        </div>
+                        <div class="movie-card">
                             <div class="movie-rating">Blog</div>
                             <h3 class="movie-title">Technical Blog Posts</h3>
                             <p class="movie-description">Regular technical articles on modern web development, performance optimization, and deep dives into JavaScript and Python concepts.</p>
@@ -144,11 +149,6 @@
                             <div class="movie-rating">Code</div>
                             <h3 class="movie-title">Algorithm Challenges</h3>
                             <p class="movie-description">Active on LeetCode and HackerRank with solutions documented on GitHub. Focus on optimization and clean, readable code practices.</p>
-                        </div>
-                        <div class="movie-card">
-                            <div class="movie-rating">Learning</div>
-                            <h3 class="movie-title">Continuous Learning</h3>
-                            <p class="movie-description">Currently exploring Rust, Go, and advanced system design patterns. Always experimenting with emerging technologies and frameworks.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Community</div>
@@ -162,22 +162,6 @@
         </section>
     </main>
 
-    <script>
-        // Netflix-style scrolling functionality
-        document.querySelectorAll('.scroll-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const container = this.parentElement;
-                const moviesRow = container.querySelector('.movies-row');
-                const cardWidth = 295; // card width + gap (280px + 15px)
-                
-                if (this.classList.contains('left')) {
-                    moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
-                } else {
-                    moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
     <script src="{% static 'website/js/exploded-view.js' %}"></script>
 
 </body>

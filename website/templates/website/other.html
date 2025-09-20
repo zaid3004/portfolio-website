@@ -74,14 +74,9 @@
                             <p class="movie-description">Building robust server-side applications, APIs, and database systems that power modern web and mobile applications efficiently and securely.</p>
                         </div>
                         <div class="movie-card">
-                            <div class="movie-rating">Design</div>
-                            <h3 class="movie-title">UI/UX Design</h3>
-                            <p class="movie-description">Designing intuitive user interfaces and experiences that are both visually appealing and functionally effective for diverse user needs.</p>
-                        </div>
-                        <div class="movie-card">
                             <div class="movie-rating">Consulting</div>
                             <h3 class="movie-title">Technical Consulting</h3>
-                            <p class="movie-description">Helping businesses and individuals understand technology solutions, make informed decisions, and implement systems that drive growth.</p>
+                            <p class="movie-description">Helping individuals understand technology solutions, make informed decisions, and implement systems that drive growth.</p>
                         </div>
                     </div>
                     <button class="scroll-btn right">›</button>
@@ -107,7 +102,7 @@
                         <div class="movie-card">
                             <div class="movie-rating">Community</div>
                             <h3 class="movie-title">Community Building</h3>
-                            <p class="movie-description">Active in tech communities, forums, and local meetups. Enjoy sharing knowledge and learning from others in collaborative environments.</p>
+                            <p class="movie-description">Active in tech communities and forums. Enjoy sharing knowledge and learning from others in collaborative environments.</p>
                         </div>
                         <div class="movie-card">
                             <div class="movie-rating">Innovation</div>
@@ -188,22 +183,6 @@
         </section>
     </main>
 
-    <script>
-        // Netflix-style scrolling functionality
-        document.querySelectorAll('.scroll-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const container = this.parentElement;
-                const moviesRow = container.querySelector('.movies-row');
-                const cardWidth = 295; // card width + gap (280px + 15px)
-                
-                if (this.classList.contains('left')) {
-                    moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
-                } else {
-                    moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
     <script src="{% static 'website/js/exploded-view.js' %}"></script>
 
 </body>

@@ -69,12 +69,12 @@
             <div class="movies-row">
               <div class="movie-card">
                 <div class="movie-rating">Intermediate</div>
-                <h3 class="movie-title">Python & Django</h3>
-                <p class="movie-description">Proficient in Python programming and Django web framework. Built scalable web applications and APIs with clean architecture.</p>
+                <h3 class="movie-title">Python Ecosystem</h3>
+                <p class="movie-description">Django, Flask & SQLAlchemy for async tasks, database integration, featuring user authentication, data management and API handling, pytest for testing, and extensive experience with Python standard library.</p>
               </div>
               <div class="movie-card">
                 <div class="movie-rating">Advanced</div>
-                <h3 class="movie-title">HTML & CSS</h3>
+                <h3 class="movie-title">JavaScript, HTML and CSS</h3>
                 <p class="movie-description">Strong skills in modern HTML and CSS. Created dynamic user interfaces and single-page applications with responsive design.</p>
               </div>
               <div class="movie-card">
@@ -130,24 +130,14 @@
             <button class="scroll-btn left">‹</button>
             <div class="movies-row">
               <div class="movie-card">
-                <div class="movie-rating">2024</div>
-                <h3 class="movie-title">Academic Excellence</h3>
-                <p class="movie-description">Maintained high academic performance while balancing coursework with practical programming projects and internship programs.</p>
+                <div class="movie-rating">2025</div>
+                <h3 class="movie-title">Harvard CS50W</h3>
+                <p class="movie-description">Completed Harvard’s CS50W course, building expertise in modern web development including backend, frontend, and database integration.</p>
               </div>
               <div class="movie-card">
-                <div class="movie-rating">2024</div>
-                <h3 class="movie-title">Problem Solving Skills</h3>
-                <p class="movie-description">Demonstrated strong analytical and problem-solving abilities through complex programming challenges and real-world simulations.</p>
-              </div>
-              <div class="movie-card">
-                <div class="movie-rating">2023</div>
-                <h3 class="movie-title">Technical Leadership</h3>
-                <p class="movie-description">Led development initiatives and mentored peers in programming concepts, showcasing leadership potential in technical environments.</p>
-              </div>
-              <div class="movie-card">
-                <div class="movie-rating">2023</div>
-                <h3 class="movie-title">Innovation Focus</h3>
-                <p class="movie-description">Consistently sought innovative approaches to development challenges, implementing creative solutions that improve user experience.</p>
+                <div class="movie-rating">2025</div>
+                <h3 class="movie-title">MUN Leadership</h3>
+                <p class="movie-description">Led the digital and technical operations of the MUN team, ensuring smooth event execution and effective technical integration.<p>
               </div>
             </div>
             <button class="scroll-btn right">›</button>
@@ -156,22 +146,6 @@
       </section>
     </main>
 
-    <script>
-      // Netflix-style scrolling functionality
-      document.querySelectorAll('.scroll-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-          const container = this.parentElement;
-          const moviesRow = container.querySelector('.movies-row');
-          const cardWidth = 295; // card width + gap (280px + 15px)
-          
-          if (this.classList.contains('left')) {
-            moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
-          } else {
-            moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
-          }
-        });
-      });
-    </script>
     <script src="{% static 'website/js/exploded-view.js' %}"></script>
   </body>
 </html>

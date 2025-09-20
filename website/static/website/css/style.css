@@ -155,82 +155,6 @@ body {
     line-height: 1.4;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        padding: 15px 25px;
-    }
-    
-    .logo {
-        font-size: 2rem;
-    }
-    
-    .main-container {
-        padding: 30px 25px;
-    }
-    
-    .welcome-title {
-        font-size: 2rem;
-    }
-    
-    .welcome-subtitle {
-        font-size: 1rem;
-    }
-    
-    .account-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
-    }
-    
-    .account-card {
-        padding: 30px 15px;
-    }
-    
-    .account-icon {
-        font-size: 3rem;
-    }
-    
-    .account-name {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .account-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .welcome-title {
-        font-size: 1.8rem;
-    }
-}
-
-/* Animation for page load */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.welcome-section {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.account-card {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.account-card:nth-child(1) { animation-delay: 0.1s; }
-.account-card:nth-child(2) { animation-delay: 0.2s; }
-.account-card:nth-child(3) { animation-delay: 0.3s; }
-.account-card:nth-child(4) { animation-delay: 0.4s; }
-
 /* Netflix-style Movie Selector Styles */
 .nav {
     display: flex;
@@ -289,7 +213,7 @@ body {
 
 .movie-card {
     flex: 0 0 280px;
-    width: 280px;;
+    width: 280px;
     height: 180px;
     min-width: 280px;
     max-width: 280px;
@@ -319,7 +243,7 @@ body {
 }
 
 .movie-card:hover {
-    transform: scale(1.1) translateY(10px);
+    transform: scale(1.05) translateY(-5px);
     border-color: var(--coral-red);
     box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
     z-index: 10;
@@ -336,10 +260,11 @@ body {
     margin-bottom: 8px;
     position: relative;
     z-index: 2;
+    line-height: 1.3;
 }
 
 .movie-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--medium-gray);
     line-height: 1.4;
     position: relative;
@@ -377,7 +302,7 @@ body {
     border-radius: 50%;
     transition: all 0.3s ease;
     z-index: 10;
-    opacity: 0.1;
+    opacity: 0.7;
     pointer-events: all;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 50px;
@@ -389,7 +314,6 @@ body {
 
 .movies-container:hover .scroll-btn {
     opacity: 1;
-    pointer-events: auto;
 }
 
 .scroll-btn:hover {
@@ -401,11 +325,11 @@ body {
 }
 
 .scroll-btn.left {
-    left: 5px;
+    left: 10px;
 }
 
 .scroll-btn.right {
-    right: 5px;
+    right: 10px;
 }
 
 .scroll-btn:focus {
@@ -415,94 +339,13 @@ body {
 }
 
 .scroll-btn:active {
-    transform: translateY(50%) scale(0.95);
+    transform: translateY(-50%) scale(0.95);
 }
 
-.movies-container
-
-/* Profile page specific styles */
-.profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* Content section */
 .content-section {
     padding: 30px 0;
     width: 100%;
-}
-
-/* Mobile responsiveness for Netflix-style */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 1.4rem;
-        padding-left: 20px;
-    }
-    
-    .movies-container {
-        padding: 0 60px;
-    }
-    
-    .movie-card {
-        flex: 0 0 250px;
-        width: 250px;
-        height: 160px;
-    }
-    
-    .movie-title {
-        font-size: 1rem;
-    }
-    
-    .movie-description {
-        font-size: 0.8rem;
-        -webkit-line-clamp: 3;
-    }
-    
-    .scroll-btn {
-        font-size: 1.4rem;
-        width: 44px;
-        height: 44px;
-        padding: 10px 12px;
-        opacity: 0.2;
-    }
-    
-    .scroll-btn.left {
-        left: 5px;
-    }
-
-    .scroll-btn.right {
-        right: 5px;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .movie-card {
-        flex: 0 0 220px;
-        width: 220px;
-        height: 140px;
-        padding: 15px;
-    }
-
-    .movies-container {
-        padding: 0 50px;
-    }
-
-    .scroll-btn {
-        font-size: 1.2rem;
-        width: 40px;
-        height: 40px;
-        padding: 8px 10px;
-        opacity: 0.3;
-    }
-
-    .scroll-btn.left {
-        left: 2px;
-    }
-
-    .scroll-btn.right {
-        right: 2px;
-    }
 }
 
 /* MODAL SYSTEM CSS */
@@ -541,8 +384,8 @@ body {
     position: relative;
     overflow-y: auto;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
+    transform: scale(0.3);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .modal-overlay.active .modal-content {
@@ -637,39 +480,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Media container for images/videos */
-.modal-media {
-    margin: 25px 0;
-    text-align: center;
-}
-
-.modal-media img, .modal-media video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.modal-media-caption {
-    font-size: 0.9rem;
-    color: var(--medium-gray);
-    margin-top: 10px;
-    font-style: italic;
-}
-
 /* Links and buttons in modal */
-.modal-link {
-    color: var(--coral-red);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.modal-link:hover {
-    color: var(--bright-red);
-    text-decoration: underline;
-}
-
 .modal-button {
     background: var(--coral-red);
     color: var(--text-white);
@@ -691,8 +502,112 @@ body {
     box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
-/* Responsive modal design */
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.account-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.account-card:nth-child(1) { animation-delay: 0.1s; }
+.account-card:nth-child(2) { animation-delay: 0.2s; }
+.account-card:nth-child(3) { animation-delay: 0.3s; }
+.account-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        padding: 15px 25px;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .main-container {
+        padding: 30px 25px;
+    }
+    
+    .welcome-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
+    
+    .account-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    
+    .account-card {
+        padding: 30px 15px;
+    }
+    
+    .account-icon {
+        font-size: 3rem;
+    }
+    
+    .account-name {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+        padding-left: 20px;
+    }
+    
+    .movies-container {
+        padding: 0 60px;
+    }
+    
+    .movie-card {
+        flex: 0 0 250px;
+        width: 250px;
+        min-width: 250px;
+        max-width: 250px;
+        height: 160px;
+        padding: 18px;
+    }
+    
+    .movie-title {
+        font-size: 1rem;
+    }
+    
+    .movie-description {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 3;
+    }
+    
+    .scroll-btn {
+        font-size: 1.4rem;
+        width: 44px;
+        height: 44px;
+        padding: 10px 12px;
+    }
+    
+    .scroll-btn.left {
+        left: 5px;
+    }
+
+    .scroll-btn.right {
+        right: 5px;
+    }
+    
     .modal-content {
         max-width: 95vw;
         max-height: 90vh;
@@ -714,6 +629,43 @@ body {
 }
 
 @media (max-width: 480px) {
+    .account-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .movie-card {
+        flex: 0 0 220px;
+        width: 220px;
+        min-width: 220px;
+        max-width: 220px;
+        height: 140px;
+        padding: 15px;
+    }
+
+    .movies-container {
+        padding: 0 50px;
+    }
+
+    .scroll-btn {
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+        padding: 8px 10px;
+    }
+
+    .scroll-btn.left {
+        left: 2px;
+    }
+
+    .scroll-btn.right {
+        right: 2px;
+    }
+    
     .modal-content {
         padding: 25px 15px;
     }
@@ -725,4 +677,8 @@ body {
     .modal-description {
         font-size: 0.95rem;
     }
+}
+
+a, a:link, a:hover, a:visited, a:active {
+    text-decoration: none !important;
 }
