@@ -117,9 +117,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "website", "static")]
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # directory where collectstatic will put files
+STATICFILES_DIRS = [BASE_DIR / 'website' / 'static']  # your app’s static folder
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
