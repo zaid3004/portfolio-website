@@ -29,6 +29,7 @@ const cardData = {
             { text: 'View Certificate', url: '#' }
         ]
     },
+
     'Accenture Job Simulation': {
         rating: 'June 2024',
         title: 'Accenture Job Simulation',
@@ -57,6 +58,7 @@ const cardData = {
             { text: 'View Certificate', url: '#' }
         ]
     },
+
     'JP Morgan & Chase Program': {
         rating: 'July 2024',
         title: 'JP Morgan & Chase Program',
@@ -85,6 +87,7 @@ const cardData = {
             { text: 'View Certificate', url: '#' }
         ]
     },
+
     'The Forage Programs': {
         rating: '2024 - 2025',
         title: 'The Forage Programs',
@@ -113,6 +116,7 @@ const cardData = {
             { text: 'View Certificates', url: '#' }
         ]
     },
+
     'Python Ecosystem': {
         rating: 'Intermediate',
         title: 'Python Ecosystem',
@@ -142,6 +146,7 @@ const cardData = {
             { text: 'Live Demo Of VVA', url: 'https://orion-vva.vercel.app' }
         ]
     },
+
     'JavaScript, HTML and CSS': {
         rating: 'Advanced',
         title: 'JavaScript, HTML And CSS',
@@ -169,6 +174,7 @@ const cardData = {
         },
         links: []
     },
+
     'Database Management': {
         rating: 'Beginner',
         title: 'Database Management',
@@ -194,6 +200,7 @@ const cardData = {
         },
         links: []
     },
+
     'Version Control': {
         rating: 'Advanced',
         title: 'Version Control',
@@ -220,6 +227,7 @@ const cardData = {
             { text: 'View GitHub', url: 'https://github.com/zaid3004' }
         ]
     },
+
     'Portfolio Website': {
         rating: "Featured - You're Here!",
         title: 'Portfolio Website',
@@ -245,6 +253,7 @@ const cardData = {
             { text: 'View Repository', url: 'https://github.com/zaid3004/portfolio-website' }
         ]
     },
+
     'Voice Virtual Assistant': {
         rating: 'Orion VVA - Public',
         title: 'Voice Virtual Assistant',
@@ -271,6 +280,7 @@ const cardData = {
             { text: 'View Repository', url: 'https://github.com/zaid3004/orion-vva' }
         ]
     },
+
     'Finance Tracker': {
         rating: 'Web Application - Not Public',
         title: 'Finance Tracker',
@@ -296,6 +306,7 @@ const cardData = {
             { text: 'View Code', url: 'https://github.com/zaid3004/finance-tracker' }
         ]
     },
+
     'QR Code Generator': {
         rating: 'Image Generator - Not Public',
         title: 'QR Code Generator',
@@ -320,6 +331,7 @@ const cardData = {
             { text: 'View Code', url: 'https://github.com/zaid3004/qr-generator' }
         ]
     },
+
     'Harvard CS50W': {
         rating: '2025',
         title: 'Harvard CS50W: Web Development With Python & JavaScript',
@@ -343,6 +355,7 @@ const cardData = {
             { text: 'View Certificate', url: '#' }
         ]
     },
+
     'MUN Leadership': {
         rating: '2025',
         title: 'Model United Nations – Head of Technology',
@@ -365,7 +378,193 @@ const cardData = {
             { text: 'Event Website', url: 'https://gcs-mun.vercel.app' },
             { text: 'Leadership Recognition', url: '#' }
         ]
-    }
+    },
+
+    'Aurora VVA': {
+        rating: 'Voice Virtual Assistant',
+        title: 'Aurora VVA',
+        description: 'A collaborative AI-powered voice assistant project using Python, speech recognition, and text-to-speech, built with agile methods, version control, and comprehensive testing.',
+        sections: {
+            'Core Features': [
+                'Real-time speech recognition and synthesis',
+                'Command execution and task automation',
+                'Conversation logging and analysis',
+                'Error handling and fallback responses'
+            ],
+            'Development Practices': [
+                'Agile methodology with sprint planning',
+                'Version control using GitHub',
+                'Unit testing and debugging',
+                'Team-based collaboration'
+            ],
+            'Key Outcomes': [
+                'Built a functional VVA prototype',
+                'Strengthened teamwork and agile practices',
+                'Presented project outcomes in a research setting'
+            ]
+        },
+        links: [
+            { text: 'View Project', url: '#' }
+        ]
+    },
+
+    'Password Strength Checker': {
+        rating: 'Utility',
+        title: 'Password Strength Checker',
+        description: 'A Python CLI tool that evaluates password security by detecting weak patterns, measuring complexity, and guiding users toward creating stronger choices.',
+        sections: {
+            'Functionality': [
+                'Checks against common password lists',
+                'Analyzes character variety and length',
+                'Detects weak sequential patterns',
+                'Generates strength feedback'
+            ],
+            'Technical Implementation': [
+                'Developed with Python standard libraries',
+                'Regex for pattern recognition',
+                'CLI-based secure input handling',
+                'Extensible design for new rules'
+            ],
+            'Applications': [
+                'Improves user awareness of security',
+                'Can be integrated into login systems',
+                'Provides educational feedback on security'
+            ]
+        },
+        links: [
+            { text: 'View Code', url: '#' }
+        ]
+    },
+
+    'Computer Science Fundamentals': {
+        rating: 'Core',
+        title: 'Computer Science Fundamentals',
+        description: 'Coursework covering OOP, data structures, algorithms, and computational theory with practical coding assignments.',
+        sections: {
+            'Core Topics': [
+                'Object-Oriented Programming (OOP)',
+                'Data Structures and Algorithms',
+                'Computational theory and complexity',
+                'Problem-solving with pseudocode'
+            ],
+            'Technical Skills': [
+                'Algorithm design and analysis',
+                'Debugging and testing techniques',
+                'Memory and runtime optimization',
+                'Abstract data type implementation'
+            ],
+            'Coursework Projects': [
+                'Implemented sorting and search algorithms',
+                'Built OOP-based mini applications',
+                'Applied computational theory concepts',
+                'Developed structured programming assignments'
+            ]
+        },
+        links: [
+            { text: 'View Coursework', url: '#' }
+        ]
+    },
+
+    'VVA Research Paper': {
+        rating: 'Research',
+        title: 'Aurora VVA Research Paper',
+        description: 'Team-authored research paper on building an AI-powered virtual assistant using speech recognition, NLP, and Python-based automation.',
+        sections: {
+            'Research Focus': [
+                'Speech recognition techniques',
+                'Natural Language Processing (NLP)',
+                'Task automation in Python',
+                'AI-driven conversational design'
+            ],
+            'Methodology': [
+                'Agile project workflow',
+                'Collaborative research writing',
+                'Experimentation and prototyping',
+                'Performance evaluation and testing'
+            ],
+            'Contributions': [
+                'Co-authored and reviewed research content',
+                'Presented findings with team',
+                'Explored future improvements for VVAs',
+                'Strengthened academic research skills'
+            ]
+        },
+        links: [
+            { text: 'Read Paper', url: '#' }
+        ]
+    },
+    'Development Tools': {
+        rating: 'Tools',
+        title: 'Development Tools',
+        description: 'Experience with modern development environments, debugging utilities, and version control workflows to streamline coding and collaboration.',
+        sections: {
+            'Core Tools': [
+                'Git and GitHub workflows',
+                'VS Code with productivity extensions',
+                'Integrated terminal and build tools'
+            ],
+            'Debugging & Testing': [
+                'Debugging with breakpoints and logs',
+                'Unit and integration testing',
+                'Automated testing frameworks',
+                'Error handling and profiling tools'
+            ],
+            'Workflow & Optimization': [
+                'Branching strategies for collaboration',
+                'Code reviews and pull requests',
+                'Performance profiling and optimization',
+                'Continuous improvement practices'
+            ]
+        },
+        links: [
+            { text: 'View Setup', url: '#' }
+        ]
+    },
+    'APIs & Services': {
+        rating: 'Integration',
+        title: 'APIs & Services',
+        description: 'Hands-on experience designing, building, and integrating APIs for seamless data exchange and service interaction across applications.',
+        sections: {
+            'Core Skills': [
+                'REST API design and implementation',
+                'Flask and Django-based endpoints',
+                'JSON and XML data handling',
+                'Authentication and authorization in APIs'
+            ],
+            'Integrations': [
+                'Currency conversion API in Finance Tracker',
+                'Third-party data imports and exports',
+                'Excel/CSV integration using Pandas',
+                'External library and service integration'
+            ],
+            'Best Practices': [
+                'Error handling and validation',
+                'Secure API communication',
+                'Documentation for API usage',
+                'Testing endpoints with Postman and Pytest'
+            ]
+        },
+        links: [
+            { text: 'View Finance Tracker', url: '#' }
+        ]
+    },
+    'Coming Soon': {
+    rating: '',
+    title: 'Coming Soon!',
+    description: 'Exciting new projects are on the way. Stay tuned for upcoming releases!',
+    sections: {
+        'What to Expect': [
+            'Innovative coding projects',
+            'More advanced web applications',
+            'Cutting-edge AI tools',
+            'Open-source contributions'
+        ]
+    },
+    links: [
+        { text: 'Check Back Later', url: '#' }
+    ]
+}
+
 };
 
 function normalizeKey(s) {
@@ -472,5 +671,5 @@ document.addEventListener('DOMContentLoaded', function () {
             if (this.classList.contains('left')) moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
             else moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
         });
-    });
+    }); 1
 });
