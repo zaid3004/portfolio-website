@@ -18,7 +18,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
-DEBUG = os.getenv("DEBUG", "False") == "True"
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,6 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 INSTALLED_APPS = [
     'website',
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -101,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+DEBUG = True
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
@@ -118,9 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # directory where collectstatic will put files
-STATICFILES_DIRS = [BASE_DIR / 'website' / 'static']  # your app’s static folder
-
+STATIC_DIRS = [os.path.join(BASE_DIR, 'website/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
