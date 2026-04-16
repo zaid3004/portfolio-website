@@ -124,7 +124,81 @@ body::after {
   padding: 8rem 2rem 4rem;
 }
 
+/* === Hero Section === */
+.hero {
+  margin-bottom: 6rem;
+  text-align: left;
+  max-width: 900px;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+}
+
+.hero-title span {
+  color: var(--primary);
+}
+
+.hero-desc {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--muted-foreground);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
 /* === Section Headers === */
+/* === Hero Section === */
+.hero {
+  margin-bottom: 6rem;
+  text-align: left;
+  max-width: 900px;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+}
+
+.hero-title span {
+  color: var(--primary);
+}
+
+.hero-desc {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--muted-foreground);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
 .sec-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -142,7 +216,7 @@ body::after {
 
 .sec-title {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--foreground);
 }
 
@@ -187,7 +261,7 @@ body::after {
 }
 
 .card-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--primary);
   margin-bottom: 2rem;
   opacity: 0.8;
@@ -195,7 +269,7 @@ body::after {
 
 .card-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
