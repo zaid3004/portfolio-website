@@ -15,19 +15,21 @@
   --border: #334155;
   --ring: #4f83cc;
   --radius: 0px;
-  
-  --font-sans: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-serif: "Cardo", serif;
-  
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.8);
+
+  --font-sans: "Arial Bold", sans-serif;
+  --font-mono: "Monaco", monospace;
+  --font-cursive: "Lucida Calligraphy", cursive;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.8);
   --smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --draw-speed: 1.2s;
 }
 
 /* === Reset & Base === */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -56,15 +58,24 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse 120% 100% at 50% 0%, transparent 30%, rgba(0,0,0,0.55) 65%, rgba(29, 54, 165, 0.82) 100%);
+  background: radial-gradient(
+    ellipse 120% 100% at 50% 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(29, 54, 165, 0.82) 100%
+  );
   pointer-events: none;
   z-index: 0;
 }
 
 /* === "Drawing" Entrance Animation === */
 @keyframes drawReveal {
-  from { clip-path: inset(0 100% 0 0); }
-  to { clip-path: inset(0 0 0 0); }
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .draw-in {
@@ -73,12 +84,12 @@ body::after {
 
 /* === Navigation & Logo === */
 .logo {
-  position: fixed;
+  position: relative;
   top: 2rem;
-  left: 50%;
+  left: 41.5%;
   transform: translateX(-50%);
   z-index: 100;
-  font-family: var(--font-serif);
+  font-family: var(--font-cursive);
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
@@ -88,7 +99,9 @@ body::after {
   text-align: center;
 }
 
-.logo span { color: var(--primary); }
+.logo span {
+  color: var(--primary);
+}
 
 .back-link {
   position: fixed;
@@ -146,9 +159,16 @@ body::after {
 }
 
 .hero-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-cursive);
   font-size: clamp(3rem, 8vw, 6rem);
   line-height: 1;
+  margin-bottom: 2rem;
+  max-width: 900px;
+}
+.hero-title-span {
+  font-family: var(--font-cursive);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.5;
   margin-bottom: 2rem;
   max-width: 900px;
 }
@@ -177,7 +197,7 @@ body::after {
 }
 
 .sec-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-cursive);
   font-size: 2.5rem;
   color: var(--foreground);
 }
@@ -203,7 +223,8 @@ body::after {
   overflow: hidden;
 }
 
-.card::before, .card::after {
+.card::before,
+.card::after {
   content: "COORD_X: " attr(data-key);
   position: absolute;
   font-family: var(--font-mono);
@@ -213,13 +234,20 @@ body::after {
   transition: opacity 0.3s;
 }
 
-.card::before { top: 0.5rem; left: 0.5rem; }
-.card::after { bottom: 0.5rem; right: 0.5rem; content: "VER: 2026.1"; }
+.card::before {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.card::after {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  content: "VER: 2026.1";
+}
 
 .card:active {
   transform: translateY(2px);
   background: var(--muted);
-  box-shadow: inset 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -228,7 +256,8 @@ body::after {
   z-index: 10;
 }
 
-.card:hover::before, .card:hover::after {
+.card:hover::before,
+.card:hover::after {
   opacity: 0.6;
 }
 
@@ -240,7 +269,7 @@ body::after {
 }
 
 .card-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-cursive);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -329,7 +358,9 @@ body::after {
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s var(--smooth), visibility 0.5s var(--smooth);
+  transition:
+    opacity 0.5s var(--smooth),
+    visibility 0.5s var(--smooth);
   pointer-events: none;
 }
 
@@ -353,7 +384,9 @@ body::after {
   overflow-y: auto;
 
   transform: translateY(20px) scale(0.98);
-  transition: transform 0.6s var(--smooth), clip-path 0.8s var(--smooth);
+  transition:
+    transform 0.6s var(--smooth),
+    clip-path 0.8s var(--smooth);
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
 
   display: flex;
@@ -393,7 +426,7 @@ body::after {
 }
 
 .modal-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-cursive);
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--primary);
@@ -473,19 +506,32 @@ body::after {
 }
 
 @keyframes slideIn {
-  0% { transform: translateX(100vw); }
-  100% { transform: none; }
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: none;
+  }
 }
 
 @keyframes slideOut {
-  0% { transform: none; }
-  100% { transform: translateX(-100vw); }
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .bento { grid-template-columns: 1fr; }
-  .contact-links { flex-direction: column; gap: 2rem; }
+  .bento {
+    grid-template-columns: 1fr;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 2rem;
+  }
   .logo {
     position: relative;
     left: auto;
@@ -498,5 +544,7 @@ body::after {
     height: 90vh;
     padding: 2.5rem;
   }
-  .cards { grid-template-columns: 1fr; }
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
