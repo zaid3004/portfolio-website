@@ -1,81 +1,67 @@
-<br><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaid Shaheed - Portfolio</title>
+    <title>Zaid Shaheed | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body>
-    <header class="header">
-        <a href="index.html">
-            <div class="logo">Zaid Shaheed</div>
-        </a>
-    </header>
+<body class="page-enter">
+    <div class="amb"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+    <a href="index.html" class="logo">ZAID <span>SHAHEED</span></a>
 
-    <main class="main-container">
-        <section class="welcome-section">
-            <h1 class="welcome-title">Who's browsing today?</h1>
-            <p class="welcome-subtitle">
-                Choose your perspective to explore my portfolio tailored to your interests and needs.
-                Each account provides a curated view of my work and experience.
-            </p>
-            <hr />
-            <p class="contact-info">
-                Contact Number: <a href="tel:+971545900728" class="contact-link">+971 54 590 0728</a> 
-                <br>
-                Email ID: <a href="mailto:zaidshaheed1234@gmail.com" class="contact-link">zaidshaheed1234@gmail.com</a>
+    <main class="main">
+        <section class="hero">
+            <div class="hero-badge">PORTFOLIO_SYSTEM_V2.0</div>
+            <h1 class="hero-title">Who's<br><span style="color: var(--primary);">browsing?</span></h1>
+            <p class="hero-desc">Select a drafting perspective to explore my engineering work, academic background, or professional experience.</p>
+            
+            <p class="contact-info" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted-foreground); margin-top: -1rem; margin-bottom: 3rem;">
+                <!-- TEL: <a href="tel:+971545900728" style="color: var(--primary); text-decoration: none;">+971 54 590 0728</a><br> -->
+                MAIL: <a href="mailto:zaidshaheed1234@gmail.com" style="color: var(--primary); text-decoration: none;">zaidshaheed1234@gmail.com</a>
             </p>
         </section>
 
-        <section class="account-selection">
-            <div class="account-grid">
-                <div class="account-card" onclick="window.location.href='recruiter.html'">
-                    <div class="account-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h2 class="account-name">Recruiter</h2>
-                    <p class="account-description">
-                        Professional experience, skills, achievements, and projects tailored for employment opportunities.
-                    </p>
-                </div>
+        <div class="cards">
+            <a href="recruiter.html" class="card">
+                <div class="card-icon"><i class="ph-fill ph-briefcase"></i></div>
+                <h3 class="card-title">Recruiter Perspective</h3>
+                <p class="card-desc">Professional experience, skills, achievements, and projects tailored for employment opportunities.</p>
+            </a>
+            <a href="university.html" class="card">
+                <div class="card-icon"><i class="ph-fill ph-graduation-cap"></i></div>
+                <h3 class="card-title">University Perspective</h3>
+                <p class="card-desc">Academic projects, skills, involvements and educational background for academic institutions.</p>
+            </a>
+            <a href="developer.html" class="card">
+                <div class="card-icon"><i class="ph-fill ph-code"></i></div>
+                <h3 class="card-title">Developer Perspective</h3>
+                <p class="card-desc">Technical projects, code repositories, open source contributions, and development expertise.</p>
+            </a>
+            <a href="other.html" class="card">
+                <div class="card-icon"><i class="ph-fill ph-user"></i></div>
+                <h3 class="card-title">General Perspective</h3>
+                <p class="card-desc">A general overview of my work, interests, and capabilities for anyone curious about what I do.</p>
+            </a>
+        </div>
 
-                <div class="account-card" onclick="window.location.href='university.html'">
-                    <div class="account-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h2 class="account-name">University</h2>
-                    <p class="account-description">
-                        Academic projects, skills, involvements and educational background for academic institutions.
-                    </p>
-                </div>
-
-                <div class="account-card" onclick="window.location.href='developer.html'">
-                    <div class="account-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h2 class="account-name">Fellow Developer</h2>
-                    <p class="account-description">
-                        Technical projects, code repositories, open source contributions, and development expertise for others like myself.
-                    </p>
-                </div>
-
-                <div class="account-card" onclick="window.location.href='other.html'">
-                    <div class="account-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h2 class="account-name">Other</h2>
-                    <p class="account-description">
-                        A general overview of my work, interests, and capabilities for anyone curious about what I do.
-                    </p>
-                </div>
+        <section class="contact" >
+            <h2 class="contact-title">Connect.</h2>
+            <div class="contact-links">
+                <a href="mailto:zaidshaheed1234@gmail.com" class="contact-link"><i class="ph-bold ph-envelope"></i> Email</a>
+                <a href="https://github.com/zaid3004" target="_blank" class="contact-link"><i class="ph-bold ph-github-logo"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/zaid-shaheed-274560315/" target="_blank" class="contact-link"><i class="ph-bold ph-linkedin-logo"></i> LinkedIn</a>
             </div>
         </section>
-    </main>
 
+        <footer class="footer">
+            <p>&copy; 2026 ZAID SHAHEED | ARCHITECTURAL_BLUEPRINT_V1.0</p>
+        </footer>
+    </main>
     <script src="portfolio.js"></script>
 </body>
-
 </html>

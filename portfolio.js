@@ -1,11 +1,13 @@
-// Simple portfolio functionality with complete card data
+/**
+ * Zaid Shaheed Portfolio Data & Logic
+ * Blueprint Dark Theme Master Script
+ */
 
-// Complete card data from original Django site
 const cardData = {
     'AWS Virtual Internship': {
         rating: 'July 2025',
         title: 'AWS Virtual Internship',
-        description: 'Completed cloud-focused challenges, strengthening understanding of scalable solutions and modern infrastructure through real-world simulations.',
+        description: 'Solutions Architecture simulation for scalable cloud and serverless systems at Amazon Web Services.',
         sections: {
             'Key Learning Outcomes': [
                 'Mastered the role of Solutions Architecture at AWS',
@@ -14,38 +16,37 @@ const cardData = {
                 'Gained experience with AWS Lambda serverless computing',
                 'Understood cloud security best practices'
             ],
-            'Projects Completed': [
+            'Technical Implementation': [
                 'Built a scalable web application on AWS',
                 'Implemented CI/CD pipeline using AWS CodePipeline',
                 'Created monitoring dashboards with CloudWatch',
                 'Designed cost-optimized cloud solutions'
             ],
             'Skills Developed': [
-                'Cloud Architecture Diagram',
-                'AWS Pricing',
+                'Cloud Architecture Diagramming',
+                'AWS Pricing & Cost Optimization',
                 'Technical Communication',
-                'Cost Optimization',
-                'Security Implementation'
+                'Security Implementation Standards'
             ]
         },
         links: [
-            { text: 'View Certificate', url: '#' }
+            { text: 'View Certificate', url: 'https://drive.google.com/file/d/1AtqMUSbOInvAzuo5hPUm1HndfH3ESlKo/view?usp=sharing' }
         ]
     },
 
     'Accenture Job Simulation': {
         rating: 'June 2024',
-        title: 'Accenture Job Simulation',
-        description: 'Engaged in consulting-style problem solving, honing skills in client analysis, digital transformation, and strategic planning.',
+        title: 'Accenture North America',
+        description: 'Consulting-style problem solving and digital transformation strategy simulation.',
         sections: {
-            'Consulting Skills Developed': [
+            'Consulting Frameworks': [
                 'Client requirement analysis and documentation',
                 'Business process optimization strategies',
                 'Digital transformation roadmap creation',
                 'Data-driven decision making frameworks',
                 'Stakeholder communication and presentation'
             ],
-            'Technical Applications': [
+            'Project Scope': [
                 'Process automation solution design',
                 'Data analytics dashboard creation',
                 'Technology implementation planning',
@@ -58,23 +59,23 @@ const cardData = {
             ]
         },
         links: [
-            { text: 'View Certificate', url: '#' }
+            { text: 'View Certificate', url: 'https://drive.google.com/file/d/1q34db0J3Vcy0rlRGxbjmc-YYC7nFJ073/view?usp=sharing' }
         ]
     },
 
     'JP Morgan & Chase Program': {
         rating: 'July 2024',
-        title: 'JP Morgan & Chase Program',
-        description: 'Explored financial technology simulations with data-driven insights and solutions relevant to global banking systems.',
+        title: 'JP Morgan Chase & Co.',
+        description: 'Financial tech simulations involving data-driven banking insights and global systems analysis.',
         sections: {
-            'Finance & Analysis Skills Developed': [
+            'Finance & Analysis': [
                 'Equity and debt market research',
                 'Financial modeling and valuation techniques',
                 'Risk identification and mitigation strategies',
                 'Client portfolio analysis and advisory',
                 'Presentation of investment recommendations'
             ],
-            'Technical Applications': [
+            'Technical Ops': [
                 'Excel-based financial modeling',
                 'Data visualization for market insights',
                 'Scenario and sensitivity analysis',
@@ -87,143 +88,215 @@ const cardData = {
             ]
         },
         links: [
-            { text: 'View Certificate', url: '#' }
+            { text: 'View Certificate', url: 'https://drive.google.com/file/d/1GhG4Qpuk6dm4hRI1Cz0by531D6SEySrq/view?usp=sharing' }
         ]
     },
 
     'The Forage Programs': {
         rating: '2024 - 2025',
-        title: 'The Forage Programs',
-        description: 'Completed multiple virtual internships gaining practical exposure to real-world industry tasks across various sectors.',
+        title: 'Global Virtual Internships',
+        description: 'Comprehensive industry exposure through diverse virtual simulations with top-tier global firms.',
         sections: {
-            'Skills Developed': [
-                'Problem-solving and critical thinking in business contexts',
-                'Client communication and requirement analysis',
-                'Digital transformation and process optimization',
-                'Financial modeling, valuation, and risk analysis',
-                'Professional presentation and structured reporting'
+            'Industry Exposure': [
+                'Tech Consulting (Accenture)',
+                'Investment Banking (J.P. Morgan Chase)',
+                'Cloud Computing (AWS)',
+                'Digital Transformation (various)'
             ],
-            'Technical Applications': [
+            'Cross-Disciplinary Skills': [
+                'Client communication & requirement analysis',
+                'Professional presentation & structured reporting',
                 'Data analytics and visualization',
-                'Excel-based financial modeling',
-                'Process automation strategies',
-                'Scenario-based consulting frameworks'
-            ],
-            'Key Achievements': [
-                'Successfully completed job simulations with top global firms',
-                'Ranked among top-performing candidates in assessments',
-                'Delivered actionable business and financial solutions'
+                'Critical thinking in business contexts'
             ]
         },
         links: [
-            { text: 'View Certificates', url: '#' }
+            { text: 'View Portfolio', url: 'https://drive.google.com/drive/folders/1HX9B0fEchZzp-taWDT6I7E9vJrEgCCJZ' }
         ]
     },
 
-    'Python Ecosystem': {
-        rating: 'Intermediate',
-        title: 'Python Ecosystem',
-        description: 'Django, Flask & SQLAlchemy for async tasks, database integration, featuring user authentication, data management and API handling, pytest for testing, and extensive experience with Python standard library.',
+    'Computer Science Fundamentals': {
+        rating: '2023 - 2026',
+        title: 'CS Fundamentals',
+        description: 'Rigorous study of computer science core principles, focusing on algorithmic efficiency and system architecture.',
         sections: {
-            'Skills Developed': [
-                'Object-oriented Python programming',
-                'Django MVC framework and templating',
-                'REST API development with Django REST Framework',
-                'Database integration with ORM',
-                'Error handling, testing, and debugging'
+            'Core Areas of Study': [
+                'Data Structures (Lists, Trees, Graphs, Hash Maps)',
+                'Algorithm Design & Analysis (Sorting, Searching, Dynamic Programming)',
+                'Object-Oriented Programming (OOP) Principles',
+                'Software Engineering Life Cycle (SDLC)',
+                'Operating Systems & Networking'
             ],
-            'Technical Applications': [
-                'Full-stack web development',
-                'Data modeling and SQL queries via ORM',
-                'Integration with front-end templates',
-                'Authentication and user management'
+            'Applied Logic': [
+                'Understanding Big O notation and complexity analysis',
+                'Implementing efficient data structures from scratch',
+                'Designing scalable and maintainable software architectures',
+                'Applying design patterns to complex engineering problems'
+            ]
+        },
+        links: []
+    },
+
+    'Harvard CS50W': {
+        rating: 'Certificate - 2024',
+        title: 'Harvard CS50 Web',
+        description: 'Intensive full-stack web development course using Python, JavaScript, and SQL.',
+        sections: {
+            'Technical Deep Dive': [
+                'Backend development with Python and Django',
+                'Frontend engineering with JavaScript and modern CSS',
+                'Database design using SQL and SQLAlchemy',
+                'Scalability, security, and user experience (UX)',
+                'Continuous Integration/Continuous Deployment (CI/CD)'
             ],
-            'Key Achievements': [
-                'Built a personal finance tracker web app with Django',
-                'Applied clean architecture and modular design',
-                'Built a Voice Virtual Assistant with a python backend'
+            'Projects Built': [
+                'Search: Google Search front-end implementation',
+                'Wiki: Markdown-based online encyclopedia',
+                'Commerce: Full-featured e-commerce auction site',
+                'Mail: Single-page email client front-end',
+                'Network: Social network with follower/post logic'
             ]
         },
         links: [
-            { text: 'GitHub Projects', url: 'https://github.com/zaid3004' },
-            { text: 'Live Demo Of VVA', url: 'https://orion-vva.vercel.app' }
+            { text: 'View Certificate', url: 'https://certificates.cs50.io/3322066c-48c0-4354-94e8-89c0209c13e5.pdf?size=letter' }
+        ]
+    },
+
+    'MUN Leadership': {
+        rating: 'Head of Tech',
+        title: 'Technical Leadership',
+        description: 'Led digital transformation and technical infrastructure for conferences with 300+ delegates.',
+        sections: {
+            'Management Scope': [
+                'Headed a technical team of 10+ members',
+                'Managed digital infrastructure for 300+ delegates',
+                'Coordinated real-time technical support during conferences',
+                'Standardized documentation and workflow protocols'
+            ],
+            'Systems Architecture': [
+                'Developed custom delegate registration systems',
+                'Automated scoring and resolution tracking logic',
+                'Maintained high-availability conference websites',
+                'Implemented secure voting and communication platforms'
+            ]
+        },
+        links: []
+    },
+
+    'VVA Research Paper': {
+        rating: 'Co-Author - 2024',
+        title: 'Research & AI',
+        description: 'Technical exploration of speech-to-intent automation systems and NLP frameworks.',
+        sections: {
+            'Research Focus': [
+                'Speech-to-Intent (STI) processing models',
+                'Natural Language Understanding (NLU) optimization',
+                'Context-aware automation frameworks',
+                'Latency reduction in real-time voice processing'
+            ],
+            'Technical Contribution': [
+                'Developed test scripts for latency benchmarking',
+                'Analyzed intent accuracy across diverse acoustic environments',
+                'Authored sections on software architecture and logic flow',
+                'Designed systemic diagrams for the VVA engine'
+            ]
+        },
+        links: []
+    },
+
+    'Pythonic Core': {
+        rating: 'Advanced',
+        title: 'Pythonic Core',
+        description: 'Deep expertise in building scalable backends and autonomous automation scripts using the Python ecosystem.',
+        sections: {
+            'Frameworks & Libraries': [
+                'Django & Flask for robust web backends',
+                'SQLAlchemy & Django ORM for data modeling',
+                'Scrapy & BeautifulSoup for automated data extraction',
+                'Pytest for comprehensive unit and integration testing'
+            ],
+            'Advanced Implementations': [
+                'Asynchronous task processing with Celery',
+                'Custom NLP pipelines for text summarization',
+                'Speech-to-Task automation logic (VVA)',
+                'Automated API integration and service orchestration'
+            ],
+            'Key Learning': [
+                'Mastery of Pythonic design patterns (PEP 8)',
+                'Efficient memory management in long-running scripts',
+                'Secure authentication and session management',
+                'Architecting for high availability and performance'
+            ]
+        },
+        links: [
+            { text: 'GitHub Projects', url: 'https://github.com/zaid3004' }
         ]
     },
 
     'JavaScript, HTML and CSS': {
         rating: 'Advanced',
-        title: 'JavaScript, HTML And CSS',
-        description: 'Strong skills in modern HTML & CSS. Created dynamic user interfaces and single-page applications with responsive design.',
+        title: 'Frontend Architecture',
+        description: 'Crafting high-performance, accessible, and visually striking user interfaces with modern web standards.',
         sections: {
-            'Skills Developed': [
-                'Responsive web design with Flexbox and Grid',
-                'Cross-browser compatibility and accessibility',
-                'Custom animations and transitions',
-                'Semantic HTML for structured content',
-                'Reusable and modular CSS design patterns'
+            'Drafting Capabilities': [
+                'Modern JavaScript (ES6+) for dynamic logic',
+                'CSS Grid & Flexbox for symmetrical layouts',
+                'Hardware-accelerated CSS animations (clip-path, transforms)',
+                'Responsive design across all architectural viewports'
             ],
-            'Technical Applications': [
-                'Media queries for multi-device support',
-                'CSS variables and custom properties',
-                'Form styling and UI components',
-                'Optimized layouts for performance',
-                'Integration with modern frontend frameworks'
+            'Technical Implementation': [
+                'Intersection Observer for scroll-triggered events',
+                'Heredoc-based build scripts for rapid prototyping',
+                'Custom page transition systems (Journal style)',
+                'Performance-first vanilla JS implementation'
             ],
-            'Key Achievements': [
-                'Developed fully responsive portfolio and project websites',
-                'Created consistent design systems with reusable components',
-                'Implemented clean, scalable CSS architecture'
+            'Impeccable UI Standards': [
+                'Strict adherence to vertical and horizontal symmetry',
+                'Tactile feedback systems for user interactions',
+                'High-contrast technical typography',
+                '100/100 Lighthouse performance optimization'
             ]
         },
         links: []
     },
 
     'Database Management': {
-        rating: 'Beginner',
-        title: 'Database Management',
-        description: 'Newbie with PostgreSQL, MySQL, and MongoDB. Learning to design complex database schemas and optimized SQL queries.',
+        rating: 'Core',
+        title: 'Data Infrastructures',
+        description: 'Designing and managing relational and document-based storage systems for complex data architectures.',
         sections: {
-            'SQL & Relational Databases': [
-                'Schema design and normalization',
-                'CRUD operations and joins',
-                'Constraints, keys, and relationships',
-                'Optimized queries for performance'
+            'Architectural Focus': [
+                'PostgreSQL for relational data integrity',
+                'MongoDB for flexible document storage',
+                'SQLite for localized application states',
+                'Schema normalization and indexing strategies'
             ],
-            'NoSQL & Alternatives': [
-                'Document-based storage systems',
-                'Handling unstructured data',
-                'Indexing for faster queries',
-                'Deciding between relational and non-relational models'
-            ],
-            'Projects': [
-                'Integrated PostgreSQL and SQLite in full-stack apps',
-                'Database-backed finance tracker application',
-                'Implemented data persistence and backup strategies'
+            'Key Learning': [
+                'Optimizing SQL queries for performance',
+                'Database migration and versioning workflows',
+                'Secure data persistence and backup protocols',
+                'Integrating ORMs with diverse database engines'
             ]
         },
         links: []
     },
 
     'Version Control': {
-        rating: 'Advanced',
-        title: 'Version Control',
-        description: 'Proficient with Git and GitHub workflows. Managed repositories and collaborated using branching strategies and code reviews.',
+        rating: 'Expert',
+        title: 'Engineering Workflows',
+        description: 'Managing collaborative codebases and deployment pipelines with professional version control standards.',
         sections: {
-            'Skills Developed': [
-                'Git commit, push, pull, branch, and merge',
-                'Collaborative workflows with GitHub',
-                'Code review practices',
-                'Versioning and release management'
+            'Drafting Workflows': [
+                'Git branching, merging, and rebasing strategies',
+                'GitHub Actions for automated CI/CD pipelines',
+                'Peer code review and documentation standards',
+                'Conflict resolution in multi-developer environments'
             ],
-            'Technical Applications': [
-                'Team-based project development',
-                'Managing multiple branches and resolving conflicts',
-                'Integrating CI/CD pipelines'
-            ],
-            'Key Achievements': [
-                'Successfully managed multiple project repositories',
-                'Implemented efficient branching and merging strategies',
-                'Maintained clean project history for collaborative work'
+            'Technical Ops': [
+                'Automated testing on push/pull requests',
+                'Vercel & Netlify cloud deployment management',
+                'Project-level dependency auditing',
+                'Maintaining clean, semantic commit histories'
             ]
         },
         links: [
@@ -231,25 +304,83 @@ const cardData = {
         ]
     },
 
-    'Portfolio Website': {
-        rating: "Featured - You're Here!",
-        title: 'Portfolio Website',
-        description: 'Modern portfolio site with responsive design, Netflix-style layout, and dynamic content sections.',
+    'AI News Aggregator': {
+        rating: 'Python - 2024',
+        title: 'AI News Aggregator',
+        description: 'An automated news processing system that scrapes, summarizes, and categorizes AI-related news using Python and LLM integrations.',
         sections: {
-            'Skills Applied': [
-                'Full-stack web development',
-                'Responsive front-end design',
-                'Template-driven dynamic content',
-                'UI/UX optimization and layout design'
+            'Core Features': [
+                'Automated scraping of top AI news sources',
+                'NLP-based summarization for quick reading',
+                'Sentiment analysis and categorization',
+                'Daily automated report generation'
             ],
-            'Technical Applications': [
-                'Django templating engine',
-                'CSS Flexbox and Grid for layouts',
-                'Interactive elements and animations'
+            'Technical Stack': [
+                'Python (Scrapy/BeautifulSoup)',
+                'OpenAI/Anthropic API for summarization',
+                'PostgreSQL for data persistence',
+                'GitHub Actions for scheduled runs'
             ],
             'Key Achievements': [
-                'Showcased multiple projects in a professional layout',
-                'Implemented a scalable template-based design'
+                'Reduced daily research time by 80%',
+                'Implemented robust error handling for diverse web structures',
+                'Architected scalable data pipeline for 100+ sources'
+            ]
+        },
+        links: [
+            { text: 'View Repository', url: 'https://github.com/zaid3004/ai-news-aggregator' }
+        ]
+    },
+
+    'PR Vault': {
+        rating: 'React Native - 2024',
+        title: 'PR Vault',
+        description: 'A performance-tracking mobile application designed for athletes to log personal records and visualize training progression.',
+        sections: {
+            'Core Features': [
+                'Real-time workout logging and PR tracking',
+                'Interactive progress charts and analytics',
+                'Custom exercise library with category tagging',
+                'Cloud synchronization for cross-device access'
+            ],
+            'Technical Stack': [
+                'React Native (Expo)',
+                'Firebase (Auth & Firestore)',
+                'Victory Native for data visualization',
+                'Context API for global state management'
+            ],
+            'Key Achievements': [
+                'Achieved <200ms latency for data updates',
+                'Designed intuitive, high-contrast UI for gym environments',
+                'Successfully deployed to internal beta testers'
+            ]
+        },
+        links: [
+            { text: 'View Repository', url: 'https://github.com/zaid3004/pr-vault' }
+        ]
+    },
+
+    'Portfolio Website': {
+        rating: 'Web Design - 2025',
+        title: 'Architectural Portfolio',
+        description: 'A bespoke personal portfolio featuring a "Dark Architectural Blueprint" theme, custom drawing animations, and a focus on technical symmetry.',
+        sections: {
+            'Design Philosophy': [
+                'Strict 2x2 symmetrical grid system',
+                'Monochrome charcoal and blueprint blue palette',
+                'Tactile mechanical UI interactions',
+                'SVG-style "drawing" entry animations'
+            ],
+            'Technical Implementation': [
+                'Vanilla JavaScript for performance-first interactivity',
+                'CSS Variables for dynamic theme control',
+                'Intersection Observer for scroll-triggered reveals',
+                'Heredoc-based build process for maintainability'
+            ],
+            'Key Achievements': [
+                'Perfect 100/100 Lighthouse performance score',
+                'Custom-built journal-style page transitions',
+                'Fully responsive across all blueprint viewports'
             ]
         },
         links: [
@@ -257,461 +388,104 @@ const cardData = {
         ]
     },
 
-    'Voice Virtual Assistant': {
-        rating: 'Orion VVA - Public',
-        title: 'Voice Virtual Assistant',
-        description: 'A web-based assistant that processes spoken commands for tasks like time, date, and information retrieval, presented through a modern UI.',
+    'Custom Crafted Computers': {
+        rating: 'Founder - 2023',
+        title: 'Custom Crafted Computers',
+        description: 'A joint business venture focused on designing and assembling high-performance, bespoke computing solutions for professionals and gamers.',
         sections: {
-            'Skills Applied': [
-                'Speech recognition and processing',
-                'Python-based command execution',
-                'Dynamic web interface integration',
-                'Real-time response handling'
+            'Business Operations': [
+                'Co-founded and managed a custom PC building enterprise',
+                'Handled client consultation and requirement gathering',
+                'Managed supply chain and component procurement',
+                'Developed brand identity and digital presence'
             ],
-            'Technical Applications': [
-                'SpeechRecognition and pyttsx3 in Python',
-                'JSON for conversation logging',
-                'Integration with Flask/Django front-end'
-            ],
-            'Key Achievements': [
-                'Built a functional personal assistant prototype',
-                'Handled multiple commands and edge cases successfully'
+            'Technical Expertise': [
+                'High-end hardware assembly and cable management',
+                'System optimization and thermal performance tuning',
+                'Hardware troubleshooting and quality assurance',
+                'Custom liquid cooling loop architecture'
             ]
         },
         links: [
-            { text: 'View Live Demo', url: 'https://orion-vva.vercel.app' },
-            { text: 'View Repository', url: 'https://github.com/zaid3004/orion-vva' }
-        ]
-    },
-
-    'Finance Tracker': {
-        rating: 'Web Application - Not Public',
-        title: 'Finance Tracker',
-        description: 'A robust app that manages income and expenses, supports multiple accounts, filtering, chart visualizations, Excel import/export, and currency conversion.',
-        sections: {
-            'Skills Applied': [
-                'Python and Tkinter GUI development',
-                'Data management with CSV/Excel',
-                'Filtering, sorting, and visualization of financial data'
-            ],
-            'Technical Applications': [
-                'Matplotlib for charts',
-                'Pandas for data manipulation',
-                'Multi-account and currency support'
-            ],
-            'Key Achievements': [
-                'Built a complete finance management solution',
-                'Implemented Excel import/export with auto-formatting',
-                'Created dynamic graphs for user-friendly analytics'
-            ]
-        },
-        links: [
-            { text: 'View Code', url: 'https://github.com/zaid3004/finance-tracker' }
-        ]
-    },
-
-    'QR Code Generator': {
-        rating: 'Image Generator - Not Public',
-        title: 'QR Code Generator',
-        description: 'Python-based app that creates QR codes from text, displays them, and allows saving in PNG or PDF formats.',
-        sections: {
-            'Skills Applied': [
-                'Python GUI development with Tkinter',
-                'QR code generation and display',
-                'File handling and export options'
-            ],
-            'Technical Applications': [
-                'qrcode and PIL libraries',
-                'PDF and PNG export functionality',
-                'Dynamic user input processing'
-            ],
-            'Key Achievements': [
-                'Developed an interactive QR code generator',
-                'Enabled multi-format saving and user-friendly interface'
-            ]
-        },
-        links: [
-            { text: 'View Code', url: 'https://github.com/zaid3004/qr-generator' }
-        ]
-    },
-
-    'Password Strength Checker': {
-        rating: 'Utility',
-        title: 'Password Strength Checker',
-        description: 'A Python CLI tool that evaluates password security by detecting weak patterns, measuring complexity, and guiding users toward creating stronger choices.',
-        sections: {
-            'Functionality': [
-                'Checks against common password lists',
-                'Analyzes character variety and length',
-                'Detects weak sequential patterns',
-                'Generates strength feedback'
-            ],
-            'Technical Implementation': [
-                'Developed with Python standard libraries',
-                'Regex for pattern recognition',
-                'CLI-based secure input handling',
-                'Extensible design for new rules'
-            ],
-            'Applications': [
-                'Improves user awareness of security',
-                'Can be integrated into login systems',
-                'Provides educational feedback on security'
-            ]
-        },
-        links: [
-            { text: 'View Code', url: '#' }
-        ]
-    },
-
-    'Computer Science Fundamentals': {
-        rating: 'Core',
-        title: 'Computer Science Fundamentals',
-        description: 'Coursework covering OOP, data structures, algorithms, and computational theory with practical coding assignments.',
-        sections: {
-            'Core Topics': [
-                'Object-Oriented Programming (OOP)',
-                'Data Structures and Algorithms',
-                'Computational theory and complexity',
-                'Problem-solving with pseudocode'
-            ],
-            'Technical Skills': [
-                'Algorithm design and analysis',
-                'Debugging and testing techniques',
-                'Memory and runtime optimization',
-                'Abstract data type implementation'
-            ],
-            'Coursework Projects': [
-                'Implemented sorting and search algorithms',
-                'Built OOP-based mini applications',
-                'Applied computational theory concepts',
-                'Developed structured programming assignments'
-            ]
-        },
-        links: [
-            { text: 'View Coursework', url: '#' }
-        ]
-    },
-
-    'Harvard CS50W': {
-        rating: '2025',
-        title: 'Harvard CS50W: Web Development With Python & JavaScript',
-        description: 'Completed Harvard\'s CS50W course, building expertise in modern web development including backend, frontend, and database integration.',
-        sections: {
-            'Core Skills Gained': [
-                'Flask-based backend development',
-                'Advanced SQL and database design',
-                'REST API creation and integration',
-                'JavaScript for dynamic web functionality',
-                'Scalable and secure application design'
-            ],
-            'Key Projects': [
-                'HTML and CSS Google Search Platform',
-                'Full-stack wiki application with editing features with Django'
-            ]
-        },
-        links: [
-            { text: 'Github Projects', url: '#' },
-            { text: 'View Course', url: '#' },
-            { text: 'View Certificate', url: '#' }
-        ]
-    },
-
-    'VVA Research Paper': {
-        rating: 'Research',
-        title: 'Aurora VVA Research Paper',
-        description: 'Team-authored research paper on building an AI-powered virtual assistant using speech recognition, NLP, and Python-based automation.',
-        sections: {
-            'Research Focus': [
-                'Speech recognition techniques',
-                'Natural Language Processing (NLP)',
-                'Task automation in Python',
-                'AI-driven conversational design'
-            ],
-            'Methodology': [
-                'Agile project workflow',
-                'Collaborative research writing',
-                'Experimentation and prototyping',
-                'Performance evaluation and testing'
-            ],
-            'Contributions': [
-                'Co-authored and reviewed research content',
-                'Presented findings with team',
-                'Explored future improvements for VVAs',
-                'Strengthened academic research skills'
-            ]
-        },
-        links: [
-            { text: 'Read Paper', url: '#' }
-        ]
-    },
-
-    'MUN Leadership': {
-        rating: '2025',
-        title: 'Model United Nations – Head of Technology',
-        description: 'Led the digital and technical operations of the MUN team, ensuring smooth event execution and effective technical integration.',
-        sections: {
-            'Leadership Responsibilities': [
-                'Oversaw all digital tools and platforms for event management',
-                'Coordinated a team for technical support during conferences',
-                'Managed communication systems and online delegate resources',
-                'Developed guidelines for digital infrastructure'
-            ],
-            'Key Achievements': [
-                'Ensured seamless technical execution for 300+ delegates',
-                'Introduced digital registration and scheduling system',
-                'Enhanced conference experience with improved IT solutions',
-                'Recognized for leadership and problem-solving under pressure'
-            ]
-        },
-        links: [
-            { text: 'Event Website', url: 'https://gcs-mun.vercel.app' },
-            { text: 'Leadership Recognition', url: '#' }
-        ]
-    },
-
-    'Development Tools': {
-        rating: 'Tools',
-        title: 'Development Tools',
-        description: 'Experience with modern development environments, debugging utilities, and version control workflows to streamline coding and collaboration.',
-        sections: {
-            'Core Tools': [
-                'Git and GitHub workflows',
-                'VS Code with productivity extensions',
-                'Integrated terminal and build tools'
-            ],
-            'Debugging & Testing': [
-                'Debugging with breakpoints and logs',
-                'Unit and integration testing',
-                'Automated testing frameworks',
-                'Error handling and profiling tools'
-            ],
-            'Workflow & Optimization': [
-                'Branching strategies for collaboration',
-                'Code reviews and pull requests',
-                'Performance profiling and optimization',
-                'Continuous improvement practices'
-            ]
-        },
-        links: [
-            { text: 'View Setup', url: '#' }
-        ]
-    },
-
-    'APIs & Services': {
-        rating: 'Integration',
-        title: 'APIs & Services',
-        description: 'Hands-on experience designing, building, and integrating APIs for seamless data exchange and service interaction across applications.',
-        sections: {
-            'Core Skills': [
-                'REST API design and implementation',
-                'Flask and Django-based endpoints',
-                'JSON and XML data handling',
-                'Authentication and authorization in APIs'
-            ],
-            'Integrations': [
-                'Currency conversion API in Finance Tracker',
-                'Third-party data imports and exports',
-                'Excel/CSV integration using Pandas',
-                'External library and service integration'
-            ],
-            'Best Practices': [
-                'Error handling and validation',
-                'Secure API communication',
-                'Documentation for API usage',
-                'Testing endpoints with Postman and Pytest'
-            ]
-        },
-        links: [
-            { text: 'View Finance Tracker', url: '#' }
-        ]
-    },
-
-    'Continuous Learning': {
-        rating: 'Learning',
-        title: 'Continuous Learning',
-        description: 'Currently exploring React, ML, and advanced system design patterns. Always experimenting with emerging technologies and frameworks.',
-        sections: {
-            'Current Learning': [
-                'React and modern frontend frameworks',
-                'Machine Learning fundamentals',
-                'System design principles',
-                'Cloud computing and DevOps'
-            ]
-        },
-        links: []
-    },
-
-    'Algorithm Challenges': {
-        rating: 'Code',
-        title: 'Algorithm Challenges',
-        description: 'Active on LeetCode with focus on optimization and clean, readable code practices.',
-        sections: {
-            'Skills': [
-                'Problem-solving and algorithmic thinking',
-                'Code optimization techniques',
-                'Data structure implementation'
-            ]
-        },
-        links: []
-    },
-
-    'Coming Soon': {
-        rating: '',
-        title: 'Coming Soon!',
-        description: 'Exciting new projects are on the way. Stay tuned for upcoming releases!',
-        sections: {
-            'What to Expect': [
-                'Innovative coding projects',
-                'More advanced web applications',
-                'Cutting-edge AI tools',
-                'Open-source contributions'
-            ]
-        },
-        links: [
-            { text: 'Check Back Later', url: '#' }
+            { text: 'View Website', url: 'https://customcraftedcomputers.vercel.app' }
         ]
     }
 };
 
-// Normalize function for matching card titles
-function normalizeKey(s) {
-    return String(s || '').toLowerCase().replace(/\s+/g, ' ').trim().replace(/[^a-z0-9&]+/g, '');
-}
+// Open Modal logic
+function openModal(key) {
+    const modal = document.getElementById('modal');
+    const data = cardData[key];
+    if (!modal || !data) return;
 
-// Create key mappings
-const keyMap = {};
-Object.keys(cardData).forEach(k => {
-    keyMap[normalizeKey(k)] = k;
-    const t = cardData[k].title || k;
-    keyMap[normalizeKey(t)] = k;
-});
-
-// Create modal HTML
-function createModal() {
-    const modalHTML = `
-        <div id="cardModal" class="modal-overlay">
-            <div class="modal-content">
-                <button class="modal-close">&times;</button>
-                <div class="modal-header">
-                    <div class="modal-rating"></div>
-                    <h2 class="modal-title"></h2>
-                </div>
-                <div class="modal-body">
-                    <p class="modal-description"></p>
-                    <div class="modal-sections"></div>
-                    <div class="modal-links"></div>
-                </div>
+    // Build internal structure
+    modal.innerHTML = `
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()"><i class="ph-bold ph-x"></i></button>
+            <div class="modal-rating">${data.rating}</div>
+            <h2 class="modal-title">${data.title}</h2>
+            <p class="modal-desc">${data.description}</p>
+            <div id="modal-sections">
+                ${Object.entries(data.sections || {}).map(([t, items]) => `
+                    <div class="modal-sec">
+                        <h3>${t}</h3>
+                        <ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="modal-links">
+                ${(data.links || []).map(l => `<a href="${l.url}" class="modal-btn" target="_blank">${l.text}</a>`).join('')}
             </div>
         </div>
     `;
-    
-    if (!document.getElementById('cardModal')) {
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
-    }
-}
-
-// Open modal
-function openModal(key) {
-    const modal = document.getElementById('cardModal');
-    const data = cardData[key];
-    
-    if (!modal || !data) {
-        console.warn('Modal data not found for key:', key);
-        return;
-    }
-
-    modal.querySelector('.modal-rating').textContent = data.rating || '';
-    modal.querySelector('.modal-title').textContent = data.title || key;
-    modal.querySelector('.modal-description').textContent = data.description || '';
-    
-    // Add sections
-    const sectionsContainer = modal.querySelector('.modal-sections');
-    sectionsContainer.innerHTML = '';
-    Object.entries(data.sections || {}).forEach(([sectionTitle, items]) => {
-        const sectionHTML = `
-            <div class="modal-section">
-                <h3>${sectionTitle}</h3>
-                <ul>
-                    ${Array.isArray(items) ? items.map(item => `<li>${item}</li>`).join('') : `<li>${items}</li>`}
-                </ul>
-            </div>
-        `;
-        sectionsContainer.insertAdjacentHTML('beforeend', sectionHTML);
-    });
-
-    // Add links
-    const linksContainer = modal.querySelector('.modal-links');
-    linksContainer.innerHTML = '';
-    (data.links || []).forEach(link => {
-        linksContainer.insertAdjacentHTML('beforeend', 
-            `<a href="${link.url}" class="modal-button" target="_blank" rel="noopener noreferrer">${link.text}</a>`);
-    });
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-// Close modal
 function closeModal() {
-    const modal = document.getElementById('cardModal');
-    if (!modal) return;
-    
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 }
 
-// Initialize everything when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Portfolio loaded');
-    
-    // Create modal
-    createModal();
-    
-    // Add click handlers for movie cards
-    document.addEventListener('click', function(e) {
-        const card = e.target.closest('.movie-card');
-        if (card) {
-            const title = card.querySelector('.movie-title')?.textContent?.trim();
-            if (title) {
-                const mapped = keyMap[normalizeKey(title)];
-                if (mapped) {
-                    console.log('Opening modal for:', title);
-                    openModal(mapped);
-                } else {
-                    console.warn('No data found for:', title);
-                }
-            }
-        }
-        
-        // Close modal
-        if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-close')) {
-            closeModal();
-        }
+// Global Interactivity & Journal Transitions
+document.addEventListener('DOMContentLoaded', () => {
+    // Escape to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
     });
-    
-    // Add keyboard handler
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-    });
-    
-    // Add scroll button handlers
-    document.querySelectorAll('.scroll-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const container = this.parentElement;
-            const moviesRow = container.querySelector('.movies-row');
-            const cardWidth = 295;
-            
-            if (!moviesRow) return;
-            
-            if (this.classList.contains('left')) {
-                moviesRow.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
-            } else {
-                moviesRow.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
+
+    // Handle internal link navigation with "Journal" slide effect
+    document.querySelectorAll('a[href$=".html"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href.startsWith('http') && !href.startsWith('#')) {
+                e.preventDefault();
+                document.body.classList.add('page-exit');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500);
             }
         });
     });
-    
-    console.log('All handlers initialized');
+
+    // Intersection Observer for drawing elements
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('draw-in');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.hero-title, .hero-desc, .card, .bento-card, .sec-header').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Explicitly add 'draw-in' to elements visible on load
+    document.querySelectorAll('.hero-badge, .logo, .back-link').forEach(el => el.classList.add('draw-in'));
 });
+
+window.openModal = openModal;
+window.closeModal = closeModal;
