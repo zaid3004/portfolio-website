@@ -13,12 +13,17 @@
 <body class="page-enter">
     <div class="amb"><div class="orb orb1"></div><div class="orb orb2"></div></div>
     <a href="index.html" class="logo">ZAID <span>SHAHEED</span></a>
-    <a href="index.html" class="back-link"><i class="ph-bold ph-arrow-left"></i> BACK</a>
+     <a href="index.html" class="back-link"><i class="ph-bold ph-arrow-left"></i> BACK</a>
+ 
+     <div class="timeline">
+         <div class="timeline-line"></div>
+         <div id="timeline-dot" class="timeline-dot"></div>
+     </div>
 
-    <main class="main">
-        <section class="hero">
-            <div class="hero-badge">Hello, Recruiter!</div>
-            <h1 class="hero-title">Ready to<br><span style="color: var(--primary);">Contribute.</span></h1>
+     <main class="main">
+         <section class="hero" id="hero">
+             <div class="hero-badge">Hello, Recruiter!</div>
+             <h1 class="hero-title">Ready to<br><span style="color: var(--primary);">Contribute.</span></h1>
             <p class="hero-desc">Aspiring Software Engineer with high-impact internship experience in cloud architecture, technical consulting, and fintech.</p>
             
             <div class="bento">
@@ -37,7 +42,7 @@
             </div>
         </section>
 
-        <section class="sec-header">
+        <section class="sec-header" id="experience">
             <span class="sec-label">EXPERIENCE</span>
             <h2 class="sec-title">Virtual Internships</h2>
         </section>
@@ -65,7 +70,7 @@
             </div>
         </div>
 
-        <section class="sec-header">
+        <section class="sec-header" id="skills">
             <span class="sec-label">Technical Skills</span>
             <h2 class="sec-title">Engineering Toolkit</h2>
         </section>
@@ -94,7 +99,10 @@
         </div>
 
 
-        <section class="sec-header">
+                
+
+
+        <section class="sec-header" id="projects">
             <span class="sec-label">PROJECTS</span>
             <h2 class="sec-title">Engineering Highlights</h2>
         </section>
@@ -121,7 +129,7 @@
             </div>
         </div>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2 class="contact-title">Let's connect.</h2>
             <p class="contact-sub">Available for internships and entry-level roles.</p>
             <div class="contact-links">
@@ -152,9 +160,21 @@
         document.querySelectorAll('.card').forEach(c => {
             c.addEventListener('click', () => {
                 const key = c.dataset.key;
-                if (key) openModal(key);
-            });
-        });
-    </script>
-</body>
+                 if (key) openModal(key);
+             });
+         });
+ 
+         const sections = document.querySelectorAll('section[id]');
+         const timelineDot = document.getElementById('timeline-dot');
+ 
+         window.addEventListener('scroll', () => {
+             const scrollPosition = window.scrollY;
+             const windowHeight = window.innerHeight;
+             const documentHeight = document.documentElement.scrollHeight;
+ 
+             const scrollPercentage = (scrollPosition / (documentHeight - windowHeight)) * 100;
+             timelineDot.style.top = `${scrollPercentage}%`;
+         });
+     </script>
+ </body>
 </html>

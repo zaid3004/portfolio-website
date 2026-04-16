@@ -13,13 +13,18 @@
 <body class="page-enter">
     <div class="amb"><div class="orb orb1"></div><div class="orb orb2"></div></div>
     <a href="index.html" class="logo">ZAID <span>SHAHEED</span></a>
-    <a href="index.html" class="back-link"><i class="ph-bold ph-arrow-left"></i> BACK</a>
-
-    <main class="main">
-        <section class="hero">
-            <div class="hero-badge">Connecting Ideas, Building Solutions</div>
-            <h1 class="hero-title">Engineering<br>Solutions<span>.</span></h1>
-            <p class="hero-desc">Full-stack engineering with a focus on AI automation, cloud architecture, and impeccable UI drafting.</p>
+     <a href="index.html" class="back-link"><i class="ph-bold ph-arrow-left"></i> BACK</a>
+ 
+     <div class="timeline">
+         <div class="timeline-line"></div>
+         <div id="timeline-dot" class="timeline-dot"></div>
+     </div>
+ 
+     <main class="main">
+         <section class="hero" id="hero">
+             <div class="hero-badge">Connecting Ideas, Building Solutions</div>
+             <h1 class="hero-title">Engineering<br>Solutions<span>.</span></h1>
+             <p class="hero-desc">Full-stack engineering with a focus on AI automation, cloud architecture, and impeccable UI drafting.</p>
             
             <div class="bento">
                 <div class="bento-card">
@@ -36,12 +41,12 @@
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <section class="sec-header">
-            <span class="sec-label">PROTOTYPES</span>
-            <h2 class="sec-title">Drafted Projects</h2>
-        </section>
+         </section>
+ 
+         <section class="sec-header" id="projects">
+             <span class="sec-label">PROTOTYPES</span>
+             <h2 class="sec-title">Drafted Projects</h2>
+         </section>
 
         <div class="cards">
             <div class="card" data-key="AI News Aggregator">
@@ -64,12 +69,12 @@
                 <h3 class="card-title">QR Code Generator</h3>
                 <p class="card-desc">A simple yet effective QR code generation tool with customizable options.</p>
             </div>
-        </div>
-
-        <section class="sec-header">
-            <span class="sec-label">DEPENDENCIES</span>
-            <h2 class="sec-title">Technical Stack</h2>
-        </section>
+         </div>
+ 
+         <section class="sec-header" id="stack">
+             <span class="sec-label">DEPENDENCIES</span>
+             <h2 class="sec-title">Technical Stack</h2>
+         </section>
 
         <div class="cards">
             <div class="card" data-key="Pythonic Core">
@@ -115,9 +120,21 @@
         document.querySelectorAll('.card').forEach(c => {
             c.addEventListener('click', () => {
                 const key = c.dataset.key;
-                if (key) openModal(key);
-            });
-        });
-    </script>
-</body>
+                 if (key) openModal(key);
+             });
+         });
+ 
+         const sections = document.querySelectorAll('section[id]');
+         const timelineDot = document.getElementById('timeline-dot');
+ 
+         window.addEventListener('scroll', () => {
+             const scrollPosition = window.scrollY;
+             const windowHeight = window.innerHeight;
+             const documentHeight = document.documentElement.scrollHeight;
+ 
+             const scrollPercentage = (scrollPosition / (documentHeight - windowHeight)) * 100;
+             timelineDot.style.top = `${scrollPercentage}%`;
+         });
+     </script>
+ </body>
 </html>

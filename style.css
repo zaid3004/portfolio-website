@@ -523,8 +523,43 @@ body::after {
   }
 }
 
+/* === Timeline Scroller === */
+.timeline {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75vh;
+    width: 2px;
+    display: flex;
+    justify-content: center;
+    z-index: 200;
+}
+
+.timeline-line {
+    width: 100%;
+    height: 100%;
+    background-color: var(--border);
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    border: 2px solid var(--background);
+    transition: top 0.2s ease-out;
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
+  .timeline {
+      display: none;
+  }
   .bento {
     grid-template-columns: 1fr;
   }
