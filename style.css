@@ -124,81 +124,42 @@ body::after {
   padding: 8rem 2rem 4rem;
 }
 
-/* === Hero Section === */
+/* === Symmetrical Hero === */
 .hero {
-  margin-bottom: 6rem;
-  text-align: left;
-  max-width: 900px;
+  text-align: center;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
-  display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--primary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
   border: 1px solid var(--primary);
-  padding: 0.3rem 0.8rem;
-  margin-bottom: 2rem;
-  letter-spacing: 0.1em;
+  padding: 0.4rem 1rem;
 }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 8vw, 6rem);
-  line-height: 1.1;
-  color: var(--foreground);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
   margin-bottom: 2rem;
-}
-
-.hero-title span {
-  color: var(--primary);
+  max-width: 900px;
 }
 
 .hero-desc {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: 1.1rem;
   color: var(--muted-foreground);
-  max-width: 700px;
-  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 3rem;
 }
 
 /* === Section Headers === */
-/* === Hero Section === */
-.hero {
-  margin-bottom: 6rem;
-  text-align: left;
-  max-width: 900px;
-}
-
-.hero-badge {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  padding: 0.3rem 0.8rem;
-  margin-bottom: 2rem;
-  letter-spacing: 0.1em;
-}
-
-.hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
-  line-height: 1.1;
-  color: var(--foreground);
-  margin-bottom: 2rem;
-}
-
-.hero-title span {
-  color: var(--primary);
-}
-
-.hero-desc {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: var(--muted-foreground);
-  max-width: 700px;
-  line-height: 1.6;
-}
-
 .sec-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -216,14 +177,14 @@ body::after {
 
 .sec-title {
   font-family: var(--font-serif);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--foreground);
 }
 
 /* === Symmetrical Card Grid === */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 566px));
   gap: 1px;
   border: 1px solid var(--border);
   margin-bottom: 5rem;
@@ -254,14 +215,24 @@ body::after {
 .card::before { top: 0.5rem; left: 0.5rem; }
 .card::after { bottom: 0.5rem; right: 0.5rem; content: "VER: 2026.1"; }
 
+.card:active {
+  transform: translateY(2px);
+  background: var(--muted);
+  box-shadow: inset 0 4px 12px rgba(0,0,0,0.5);
+}
+
 .card:hover {
   background: var(--secondary);
   border-color: var(--primary);
   z-index: 10;
 }
 
+.card:hover::before, .card:hover::after {
+  opacity: 0.6;
+}
+
 .card-icon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--primary);
   margin-bottom: 2rem;
   opacity: 0.8;
@@ -269,7 +240,7 @@ body::after {
 
 .card-title {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -281,7 +252,7 @@ body::after {
 /* === Bento Symmetrical === */
 .bento {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   width: 100%;
   max-width: 900px;
@@ -325,7 +296,7 @@ body::after {
 
 .footer {
   text-align: center;
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: 4rem;
   border-top: 1px solid var(--border);
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -343,8 +314,7 @@ body::after {
 /* === ABSOLUTE MONITOR CENTERING (SCROLL-AGNOSTIC) === */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100dvh;
   background: rgba(0, 0, 0, 0.4);
@@ -377,8 +347,7 @@ body::after {
   border: 1px solid var(--primary);
 
   width: 90vw;
-  height: auto;
-  max-height: 85vh;
+  height: 80vh;
   max-width: 1100px;
   max-height: 800px;
 
@@ -387,7 +356,7 @@ body::after {
      Previously this relied on `transform` as a side-effect, which is fragile. */
   position: relative;
 
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: 4rem;
   overflow-y: auto;
 
   transform: translateY(20px) scale(0.98);
@@ -428,7 +397,11 @@ body::after {
   z-index: 10;
 }
 
-/* All rules below this line are unchanged — included for completeness */
+.modal-close:hover {
+  background: var(--primary);
+  color: var(--background);
+  transform: rotate(90deg);
+}
 
 .modal-title {
   font-family: var(--font-serif);
@@ -468,6 +441,14 @@ body::after {
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
   color: var(--muted-foreground);
+  position: relative;
+}
+
+.modal-sec li::before {
+  content: "→";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--primary);
 }
 
 .modal-links {
@@ -485,29 +466,49 @@ body::after {
   font-weight: 700;
   text-decoration: none;
   border: 1px solid var(--primary);
+  transition: all 0.2s;
 }
 
-/* Responsive — unchanged */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95vw;
-    height: auto;
-    max-height: 90vh;
-    padding: 2.5rem;
-  }
+.modal-btn:hover {
+  background: transparent;
+  color: var(--primary);
 }
 
 /* === Journal Transition Class === */
 .page-exit {
-  transform: translateX(-100vw);
-  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  animation: none;
 }
 
 .page-enter {
-  transform: translateX(100vw);
+  animation: none;
+}
+
+.page-exit .main {
+  animation: slideOut 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.page-enter .main {
   animation: slideIn 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 @keyframes slideIn {
-  to { transform: translateX(0); }
+  0% { transform: translateX(100vw); }
+  100% { transform: none; }
+}
+
+@keyframes slideOut {
+  0% { transform: none; }
+  100% { transform: translateX(-100vw); }
+}
+
+@media (max-width: 768px) {
+  .bento { grid-template-columns: 1fr; }
+  .contact-links { flex-direction: column; gap: 2rem; }
+  .logo { position: relative; left: auto; transform: none; margin-bottom: 2rem; display: block; }
+  .modal-content { 
+    width: 95vw; 
+    height: 90vh; 
+    padding: 2.5rem; 
+  }
+  .cards { grid-template-columns: 1fr; }
 }

@@ -388,6 +388,34 @@ const cardData = {
         ]
     },
 
+    'QR Code Generator': {
+        rating: 'Web Utility - 2024',
+        title: 'QR Code Generator',
+        description: 'A lightweight web utility that generates downloadable QR codes from URLs and text input with fast, client-side rendering.',
+        sections: {
+            'Core Features': [
+                'Instant QR code generation from text or links',
+                'Download output as image for sharing and printing',
+                'Input validation for malformed URLs and empty values',
+                'Minimal UI optimized for speed and clarity'
+            ],
+            'Technical Stack': [
+                'Vanilla JavaScript for generation workflow',
+                'HTML/CSS for responsive utility interface',
+                'Client-side rendering with zero backend dependency',
+                'Modular event handling for maintainability'
+            ],
+            'Engineering Notes': [
+                'Built as a quick-access productivity tool',
+                'Prioritized low-latency interactions and reliability',
+                'Structured for easy extension (custom size/color/error correction)'
+            ]
+        },
+        links: [
+            { text: 'View Repository', url: 'https://github.com/zaid3004' }
+        ]
+    },
+
     'Custom Crafted Computers': {
         rating: 'Founder - 2023',
         title: 'Custom Crafted Computers',
@@ -407,7 +435,7 @@ const cardData = {
             ]
         },
         links: [
-            { text: 'View Website', url: 'https://customcraftedcomputers.vercel.app' }
+            { text: 'View Website', url: 'https://cc-computers.vercel.app' }
         ]
     }
 };
