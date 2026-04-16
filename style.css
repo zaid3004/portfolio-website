@@ -46,20 +46,19 @@ body {
   line-height: 1.6;
   min-height: 100dvh;
   overflow-x: hidden;
-  background-image: 
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
   background-attachment: fixed;
 }
 
+/* Deep radial vignette — darkens edges and bottom, clean center */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, transparent, rgba(0,0,0,0.4));
+  background: radial-gradient(ellipse 120% 100% at 50% 0%, transparent 30%, rgba(0,0,0,0.55) 65%, rgba(29, 54, 165, 0.82) 100%);
   pointer-events: none;
-  z-index: 100;
+  z-index: 0;
 }
 
 /* === "Drawing" Entrance Animation === */
@@ -100,11 +99,11 @@ body::after {
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-mono);
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   text-decoration: none;
   color: var(--foreground);
-  padding: 0.75rem 1.5rem; 
-  border: 2px solid var(--primary); 
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary);
   background: var(--muted);
   transition: all 0.2s;
   font-weight: 700;
@@ -122,6 +121,8 @@ body::after {
   max-width: 1200px;
   margin: 0 auto;
   padding: 8rem 2rem 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* === Symmetrical Hero === */
@@ -285,13 +286,16 @@ body::after {
   font-family: var(--font-mono);
   text-decoration: none;
   color: var(--foreground);
-  border-bottom: 1px solid transparent;
+  /* border-bottom: 1px solid transparent; */
   transition: all 0.3s;
+  border: 2px solid var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 40%;
 }
 
 .contact-link:hover {
-  color: var(--primary);
-  border-color: var(--primary);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .footer {
@@ -304,14 +308,12 @@ body::after {
 }
 
 /* ============================================================
-   MODAL — FIXED (drop-in replacement for the modal blocks)
-   3 bugs corrected:
-     1. transition: all → specific props (no more backdrop-filter jank)
-     2. .modal-close → position: sticky (survives scrolling)
-     3. .modal-content → position: relative (explicit containing block)
+   MODAL — FIXED
+   1. transition: all → specific props (no backdrop-filter jank)
+   2. .modal-close → position: sticky (survives scrolling)
+   3. .modal-content → position: relative (explicit containing block)
    ============================================================ */
 
-/* === ABSOLUTE MONITOR CENTERING (SCROLL-AGNOSTIC) === */
 .modal {
   position: fixed;
   inset: 0;
@@ -327,12 +329,7 @@ body::after {
 
   opacity: 0;
   visibility: hidden;
-
-  /* FIX 1: was `transition: all 0.5s var(--smooth)` — "all" tries to
-     animate backdrop-filter too, causing jank and unexpected repaints.
-     Now only the two properties that actually change are transitioned. */
   transition: opacity 0.5s var(--smooth), visibility 0.5s var(--smooth);
-
   pointer-events: none;
 }
 
@@ -351,11 +348,7 @@ body::after {
   max-width: 1100px;
   max-height: 800px;
 
-  /* FIX 3: explicitly set position: relative so .modal-close's absolute/sticky
-     positioning uses this element as its containing block — not the viewport.
-     Previously this relied on `transform` as a side-effect, which is fragile. */
   position: relative;
-
   padding: 4rem;
   overflow-y: auto;
 
@@ -374,16 +367,11 @@ body::after {
 }
 
 .modal-close {
-  /* FIX 2: was `position: absolute; top: 2rem; right: 2rem`
-     Inside a flex column with overflow-y: auto, an absolutely-positioned
-     child scrolls with the content — the button disappears when the user
-     scrolls down. `position: sticky` keeps it locked to the top-right of
-     the visible scroll area no matter how far down the user scrolls. */
   position: sticky;
   top: 0;
   align-self: flex-end;
   flex-shrink: 0;
-  margin-bottom: 1rem;   /* breathing room between button and modal title */
+  margin-bottom: 1rem;
 
   background: var(--muted);
   border: 1px solid var(--primary);
@@ -395,6 +383,7 @@ body::after {
   justify-content: center;
   cursor: pointer;
   z-index: 10;
+  transition: all 0.2s;
 }
 
 .modal-close:hover {
@@ -474,15 +463,7 @@ body::after {
   color: var(--primary);
 }
 
-/* === Journal Transition Class === */
-.page-exit {
-  animation: none;
-}
-
-.page-enter {
-  animation: none;
-}
-
+/* === Page Transitions === */
 .page-exit .main {
   animation: slideOut 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
@@ -501,14 +482,21 @@ body::after {
   100% { transform: translateX(-100vw); }
 }
 
+/* === Responsive === */
 @media (max-width: 768px) {
   .bento { grid-template-columns: 1fr; }
   .contact-links { flex-direction: column; gap: 2rem; }
-  .logo { position: relative; left: auto; transform: none; margin-bottom: 2rem; display: block; }
-  .modal-content { 
-    width: 95vw; 
-    height: 90vh; 
-    padding: 2.5rem; 
+  .logo {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  .modal-content {
+    width: 95vw;
+    height: 90vh;
+    padding: 2.5rem;
   }
   .cards { grid-template-columns: 1fr; }
 }
