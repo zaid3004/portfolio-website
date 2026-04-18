@@ -161,17 +161,19 @@ body::after {
 .hero-title {
   font-family: var(--font-cursive);
   font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1;
+  line-height: 1.05;
   margin-bottom: 2rem;
   max-width: 900px;
+  padding-right: 0.08em;
 }
 
 .hero-title-span {
   font-family: var(--font-cursive);
   font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1.5;
+  line-height: 1.2;
   margin-bottom: 2rem;
   max-width: 900px;
+  padding-right: 0.08em;
 }
 
 .hero-desc {
