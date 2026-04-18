@@ -53,7 +53,7 @@ body {
   background-attachment: fixed;
 }
 
-/* Deep radial vignette — darkens edges and bottom, clean center */
+/* Deep radial vignette */
 body::after {
   content: "";
   position: fixed;
@@ -165,6 +165,7 @@ body::after {
   margin-bottom: 2rem;
   max-width: 900px;
 }
+
 .hero-title-span {
   font-family: var(--font-cursive);
   font-size: clamp(3rem, 8vw, 6rem);
@@ -177,7 +178,66 @@ body::after {
   font-size: 1.1rem;
   color: var(--muted-foreground);
   max-width: 600px;
-  margin-bottom: 3rem;
+}
+
+/* === Hero Buttons (About & Resume) — consistent with contact-link style === */
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#about-btn,
+#resume-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--foreground);
+  background: transparent;
+  border: 2px solid var(--primary);
+  padding: 0.75rem 1.75rem;
+  border-radius: 40%;
+  cursor: pointer;
+  transition:
+    color 0.3s var(--smooth),
+    border-color 0.3s var(--smooth),
+    background 0.3s var(--smooth);
+}
+
+#about-btn:hover,
+#resume-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: transparent;
+}
+
+/* === Generic .btn (kept for any other uses) === */
+.btn {
+  font-family: var(--font-mono);
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* === PDF Controls === */
+.pdf-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#pdf-render {
+  width: 100%;
+  border: 1px solid var(--border);
 }
 
 /* === Section Headers === */
@@ -238,6 +298,7 @@ body::after {
   top: 0.5rem;
   left: 0.5rem;
 }
+
 .card::after {
   bottom: 0.5rem;
   right: 0.5rem;
@@ -304,6 +365,12 @@ body::after {
   margin-top: -7px;
 }
 
+.contact-title {
+  font-family: var(--font-cursive);
+  font-size: 2.5rem;
+  color: var(--foreground);
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -315,8 +382,9 @@ body::after {
   font-family: var(--font-mono);
   text-decoration: none;
   color: var(--foreground);
-  /* border-bottom: 1px solid transparent; */
-  transition: all 0.3s;
+  transition:
+    color 0.3s var(--smooth),
+    border-color 0.3s var(--smooth);
   border: 2px solid var(--primary);
   padding: 0.75rem 1.5rem;
   border-radius: 40%;
@@ -337,10 +405,7 @@ body::after {
 }
 
 /* ============================================================
-   MODAL — FIXED
-   1. transition: all → specific props (no backdrop-filter jank)
-   2. .modal-close → position: sticky (survives scrolling)
-   3. .modal-content → position: relative (explicit containing block)
+   MODAL
    ============================================================ */
 
 .modal {
@@ -370,18 +435,51 @@ body::after {
   pointer-events: auto;
 }
 
+/* === Symmetrical Modal Grid === */
+.modal-grid {
+    display: block;
+}
+
+.modal-header {
+    padding-bottom: 2rem;
+}
+
+.modal-body {
+    overflow: visible;
+}
+
+.modal-footer {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+/* Custom Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: var(--muted);
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 4px;
+    border: 2px solid var(--muted);
+}
+
 .modal-content {
   background: var(--card);
   border: 1px solid var(--primary);
 
-  width: 90vw;
+  width: 94vw;
   height: 80vh;
-  max-width: 1100px;
+  max-width: 960px;
   max-height: 800px;
 
   position: relative;
   padding: 4rem;
   overflow-y: auto;
+  overflow-x: hidden;
 
   transform: translateY(20px) scale(0.98);
   transition:
@@ -399,12 +497,19 @@ body::after {
   clip-path: inset(0 0 0 0);
 }
 
+.modal.modal-resume .modal-content {
+  width: 96vw;
+  max-width: 1120px;
+  height: 88vh;
+  max-height: 920px;
+}
+
 .modal-close {
   position: sticky;
   top: 0;
   align-self: flex-end;
   flex-shrink: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 
   background: var(--muted);
   border: 1px solid var(--primary);
@@ -474,8 +579,8 @@ body::after {
 }
 
 .modal-links {
-  margin-top: auto;
   padding-top: 4rem;
+  margin-bottom: 1rem;
   display: flex;
   gap: 2rem;
 }
@@ -486,9 +591,14 @@ body::after {
   color: var(--background);
   font-family: var(--font-mono);
   font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
   text-decoration: none;
-  border: 1px solid var(--primary);
-  transition: all 0.2s;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  transition:
+    background 0.2s var(--smooth),
+    color 0.2s var(--smooth);
 }
 
 .modal-btn:hover {
@@ -525,61 +635,86 @@ body::after {
 
 /* === Timeline Scroller === */
 .timeline {
-    position: fixed;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 75vh;
-    width: 2px;
-    display: flex;
-    justify-content: center;
-    z-index: 200;
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 75vh;
+  width: 2px;
+  display: flex;
+  justify-content: center;
+  z-index: 200;
 }
 
 .timeline-line {
-    width: 100%;
-    height: 100%;
-    background-color: var(--border);
+  width: 100%;
+  height: 100%;
+  background-color: var(--border);
 }
 
 .timeline-dot {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    border: 2px solid var(--background);
-    transition: top 0.2s ease-out;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 2px solid var(--background);
+  transition: top 0.2s ease-out;
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
   .timeline {
-      display: none;
+    display: none;
   }
+
   .bento {
     grid-template-columns: 1fr;
   }
+
   .contact-links {
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
   }
+
   .logo {
     position: relative;
     left: auto;
     transform: none;
     margin-bottom: 2rem;
     display: block;
+    text-align: center;
   }
+
   .modal-content {
     width: 95vw;
     height: 90vh;
     padding: 2.5rem;
   }
+
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #about-btn,
+  #resume-btn {
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+  }
+
+  .modal-links {
+    flex-direction: column;
+    gap: 1rem;
   }
 }

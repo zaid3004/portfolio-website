@@ -87,7 +87,7 @@
                 <p class="card-desc">Version control and collaborative development practices.</p>
             </div>
             <div class="card" data-key="JavaScript, HTML and CSS">
-                <div class="card-icon"><i class="ph-fill ph-js"></i></div>
+                <div class="card-icon"><i class="ph-fill ph-code"></i></div>
                 <h3 class="card-title">JavaScript, HTML and CSS</h3>
                 <p class="card-desc">Front-end development with modern frameworks and libraries.</p>
             </div>
@@ -147,11 +147,19 @@
     <div class="modal" id="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()"><i class="ph-bold ph-x"></i></button>
-            <div class="modal-rating" id="modal-rating"></div>
-            <h2 class="modal-title" id="modal-title"></h2>
-            <p class="modal-desc" id="modal-desc"></p>
-            <div id="modal-sections"></div>
-            <div class="modal-links" id="modal-links"></div>
+            <div class="modal-grid">
+                <div class="modal-header">
+                    <div class="modal-rating" id="modal-rating"></div>
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <p class="modal-desc" id="modal-desc"></p>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-sections"></div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-links" id="modal-links"></div>
+                </div>
+            </div>
         </div>
     </div>
 

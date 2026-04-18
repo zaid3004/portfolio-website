@@ -4,6 +4,37 @@
  */
 
 const cardData = {
+    'resume': {
+        rating: '',
+        title: 'Zaid Shaheed',
+        description: '',
+        html: '<iframe src="Zaid Shaheed Resume 2 pdf file.pdf" width="100%" height="680px" style="border: none;"></iframe>',
+        sections: {},
+        links: [
+            { text: 'Open in New Tab', url: 'Zaid Shaheed Resume 2 pdf file.pdf' },
+            // { text: 'Download PDF', onClick: () => downloadPDF('Zaid Shaheed Resume 2 pdf file.pdf', 'Zaid_Shaheed_Resume.pdf') }
+        ]
+    },
+
+    'about': {
+        rating: '',
+        title: 'Zaid Shaheed',
+        description: 'Student Developer @ Gems Education',
+        html: '<img src="Zaid Shaheed Photo.jpg" alt="Zaid Shaheed" style="width: 100%; max-width: 300px; border-radius: 8px; margin-bottom: 1rem;">',
+        sections: {
+            'More About Me': [
+                'I am a passionate student developer with a strong interest in software engineering and technology. Currently finishing my education at Gems Education, I have been actively involved in various projects that have allowed me to apply my skills and learn new technologies.',
+                'My journey in coding started with a curiosity for how software works, which quickly turned into a passion for creating and problem-solving. I have experience in web development, backend engineering, and data analysis, and I am always eager to take on new challenges that allow me to grow as a developer.',
+                'In addition to my technical skills, I am a strong believer in continuous learning and collaboration. I enjoy working with others to share knowledge and create innovative solutions. My goal is to contribute to impactful projects and continue developing my expertise in the field of software engineering.',
+                'I am looking to expand my horizons and wander into the world of electronics and mechanics, as I believe that a strong understanding of hardware can complement my software skills and open up new possibilities for innovation. I am excited about the future and the opportunities to create meaningful technology that can make a difference.',
+                'Feel free to explore my portfolio and reach out if you would like to connect or collaborate on a project!'
+            ]
+        },
+        links: [
+            { text: 'Contact Me', url: 'mailto:zaidshaheed1234@gmail.com' }
+        ]
+    },
+
     'AWS Virtual Internship': {
         rating: 'July 2025',
         title: 'AWS Virtual Internship',
@@ -440,67 +471,131 @@ const cardData = {
     }
 };
 
-// Open Modal logic
+// ============================================================
+// Helpers
+// ============================================================
+function buildSectionsHTML(data) {
+    let html = '';
+    if (data.html) {
+        html += `<div class="modal-sec">${data.html}</div>`;
+    }
+    html += Object.entries(data.sections || {}).map(([title, items]) => `
+        <div class="modal-sec">
+            <h3>${title}</h3>
+            <ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>
+        </div>
+    `).join('');
+    return html;
+}
+
+function buildLinksHTML(data, key) {
+    return (data.links || []).map(l =>
+        l.onClick
+            ? `<button type="button" class="modal-btn" id="dynamic-link-${key}">${l.text}</button>`
+            : `<a href="${l.url}" class="modal-btn" target="_blank">${l.text}</a>`
+    ).join('');
+}
+
+function wireOnClickLinks(data, key) {
+    (data.links || []).forEach(l => {
+        if (l.onClick) {
+            const btn = document.getElementById(`dynamic-link-${key}`);
+            if (btn) btn.addEventListener('click', l.onClick);
+        }
+    });
+}
+
+// ============================================================
+// Open Modal — single path, always uses static structure
+// ============================================================
 function openModal(key) {
     const modal = document.getElementById('modal');
     const data = cardData[key];
     if (!modal || !data) return;
 
-    // Build internal structure
-    modal.innerHTML = `
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()"><i class="ph-bold ph-x"></i></button>
-            <div class="modal-rating">${data.rating}</div>
-            <h2 class="modal-title">${data.title}</h2>
-            <p class="modal-desc">${data.description}</p>
-            <div id="modal-sections">
-                ${Object.entries(data.sections || {}).map(([t, items]) => `
-                    <div class="modal-sec">
-                        <h3>${t}</h3>
-                        <ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>
-                    </div>
-                `).join('')}
-            </div>
-            <div class="modal-links">
-                ${(data.links || []).map(l => `<a href="${l.url}" class="modal-btn" target="_blank">${l.text}</a>`).join('')}
-            </div>
-        </div>
-    `;
+    modal.classList.toggle('modal-resume', key === 'resume');
 
+    document.getElementById('modal-rating').textContent = data.rating || '';
+    document.getElementById('modal-title').textContent = data.title || '';
+    document.getElementById('modal-desc').textContent = data.description || '';
+    document.getElementById('modal-sections').innerHTML = buildSectionsHTML(data);
+    document.getElementById('modal-links').innerHTML = buildLinksHTML(data, key);
+
+    wireOnClickLinks(data, key);
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
+// ============================================================
+// Close Modal
+// ============================================================
 function closeModal() {
     const modal = document.getElementById('modal');
     if (modal) {
         modal.classList.remove('active');
+        modal.classList.remove('modal-resume');
         document.body.style.overflow = '';
     }
 }
 
-// Global Interactivity & Journal Transitions
+// ============================================================
+// Download PDF
+// ============================================================
+async function downloadPDF(url, filename) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Failed to fetch PDF');
+
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+
+        link.href = objectUrl;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(objectUrl);
+    } catch (error) {
+        const fallbackLink = document.createElement('a');
+        fallbackLink.href = url;
+        fallbackLink.download = filename;
+        document.body.appendChild(fallbackLink);
+        fallbackLink.click();
+        document.body.removeChild(fallbackLink);
+    }
+}
+
+// ============================================================
+// Global Interactivity
+// ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Escape to close
+
+    // About & Resume buttons — index.html only, safely guarded
+    const aboutBtn = document.getElementById('about-btn');
+    const resumeBtn = document.getElementById('resume-btn');
+    if (aboutBtn) aboutBtn.addEventListener('click', () => openModal('about'));
+    if (resumeBtn) resumeBtn.addEventListener('click', () => openModal('resume'));
+
+    // Escape key closes modal
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     });
 
-    // Handle internal link navigation with "Journal" slide effect
+    // Journal-style page transitions
     document.querySelectorAll('a[href$=".html"]').forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (!href.startsWith('http') && !href.startsWith('#')) {
                 e.preventDefault();
                 document.body.classList.add('page-exit');
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 500);
+                setTimeout(() => { window.location.href = href; }, 500);
             }
         });
     });
 
-    // Intersection Observer for drawing elements
+    // Intersection Observer — draw-in on scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) e.target.classList.add('draw-in');
@@ -511,9 +606,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Explicitly add 'draw-in' to elements visible on load
-    document.querySelectorAll('.hero-badge, .logo, .back-link').forEach(el => el.classList.add('draw-in'));
+    // Elements visible immediately on load
+    document.querySelectorAll('.hero-badge, .logo, .back-link').forEach(el => {
+        el.classList.add('draw-in');
+    });
 });
 
+// Expose globals for inline onclick attributes
 window.openModal = openModal;
 window.closeModal = closeModal;
+window.downloadPDF = downloadPDF;
